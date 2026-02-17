@@ -1,12 +1,12 @@
 # Sprint 2 Review - Property Management API
 
-**Date:** February 17, 2026  
-**Sprint Duration:** 1 week  
+**Date:** February 17, 2026
+**Sprint Duration:** 1 week
 **Sprint Goal:** Implement role-based access control and property management features with improved development practices
 
 ---
 
-## 📊 Sprint Metrics
+## Sprint Metrics
 
 ### Story Points
 - **Planned:** 13 SP
@@ -14,8 +14,8 @@
 - **Velocity:** 13 SP (100% completion rate)
 
 ### Work Items Completed
-- US3: Implement Role-Based Access Control (5 SP) ✅
-- US4: Property Management (8 SP) ✅
+- US3: Implement Role-Based Access Control (5 SP)
+- US4: Property Management (8 SP)
 
 ### Quality Metrics
 - **Tests Written:** 14 new tests
@@ -27,20 +27,20 @@
 
 ---
 
-## ✅ Delivered Features
+## Delivered Features
 
 ### 1. Role-Based Access Control (US3 - 5 SP)
 
 **Implementation Approach:** Test-Driven Development (TDD)
 
 #### Delivered Capabilities:
-- ✅ Three role hierarchy implemented: USER, AGENT, ADMIN
-- ✅ Method-level security with @EnableMethodSecurity
-- ✅ Admin-only endpoint: `GET /api/admin/stats`
-- ✅ Agent/Admin endpoint: `GET /api/agent/dashboard`
-- ✅ @PreAuthorize annotations on controller methods
-- ✅ Proper 403 Forbidden responses for unauthorized access
-- ✅ Global exception handler for AccessDeniedException
+- Three role hierarchy implemented: USER, AGENT, ADMIN
+- Method-level security with @EnableMethodSecurity
+- Admin-only endpoint: `GET /api/admin/stats`
+- Agent/Admin endpoint: `GET /api/agent/dashboard`
+- @PreAuthorize annotations on controller methods
+- Proper 403 Forbidden responses for unauthorized access
+- Global exception handler for AccessDeniedException
 
 #### Files Created/Modified:
 - `SecurityConfig.java` - Added @EnableMethodSecurity
@@ -76,15 +76,15 @@
 **Status:** Core implementation complete
 
 #### Delivered Capabilities:
-- ✅ Property entity with title, description, price, owner
-- ✅ CRUD operations for properties
-- ✅ Ownership validation (only owner can update)
-- ✅ Public read access to property listings
-- ✅ Create property (AGENT/ADMIN only)
-- ✅ Update property (owner validation)
-- ✅ List all properties (public)
-- ✅ Get property by ID (public)
-- ✅ View own properties (authenticated)
+- Property entity with title, description, price, owner
+- CRUD operations for properties
+- Ownership validation (only owner can update)
+- Public read access to property listings
+- Create property (AGENT/ADMIN only)
+- Update property (owner validation)
+- List all properties (public)
+- Get property by ID (public)
+- View own properties (authenticated)
 
 #### Files Created:
 - `model/Property.java` - Property entity with @ManyToOne User relationship
@@ -115,7 +115,7 @@ public ResponseEntity<PropertyResponse> createProperty(...)
 public PropertyResponse updateProperty(Long id, PropertyRequest request, String email) {
     Property property = propertyRepository.findById(id)
         .orElseThrow(() -> new PropertyNotFoundException("Property not found"));
-    
+
     if (!property.getOwner().getEmail().equals(email)) {
         throw new AccessDeniedException("You can only update your own properties");
     }
@@ -136,40 +136,40 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 
 ---
 
-## 📈 Sprint Improvements Applied
+## Sprint Improvements Applied
 
 ### From Sprint 1 Retrospective:
 
-#### ✅ 1. Test-Driven Development (TDD)
-**Action Item:** Use TDD approach for security features  
+#### 1. Test-Driven Development (TDD)
+**Action Item:** Use TDD approach for security features
 **Implementation:** RBAC feature developed using TDD
 - Wrote 6 tests BEFORE implementing security features
 - All 6 tests passed after implementation
 - Zero bugs found in RBAC implementation
-- **Result:** TDD proved highly effective for security features ✅
+- **Result:** TDD proved highly effective for security features
 
-#### ✅ 2. PR Checklist Template
-**Action Item:** Create standardized PR template  
+#### 2. PR Checklist Template
+**Action Item:** Create standardized PR template
 **Implementation:** Created `.github/pull_request_template.md`
 - Includes testing checklist
 - Code quality checks
 - Documentation requirements
 - Breaking changes section
-- **Result:** Improved PR review process ✅
+- **Result:** Improved PR review process
 
-#### ✅ 3. Better Task Breakdown
-**Action Item:** Break large stories into smaller tasks  
+#### 3. Better Task Breakdown
+**Action Item:** Break large stories into smaller tasks
 **Implementation:** US4 broken into clear steps
 1. Create Property entity
 2. Create PropertyRepository
 3. Implement PropertyService with ownership validation
 4. Create PropertyController with RBAC
 5. Write integration tests
-- **Result:** More manageable development process ✅
+- **Result:** More manageable development process
 
 ---
 
-## 🛠️ Technical Achievements
+## Technical Achievements
 
 ### Architecture Improvements
 1. **Method-Level Security:** Transitioned from URL-based to method-level security with @PreAuthorize
@@ -191,27 +191,27 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 
 ---
 
-## 📊 Updated API Inventory
+## Updated API Inventory
 
 ### Total Endpoints: 11
 
 | Endpoint | Method | Auth | Role | Status | Sprint |
 |----------|--------|------|------|--------|--------|
-| `/api/auth/register` | POST | No | - | ✅ Live | 1 |
-| `/api/auth/login` | POST | No | - | ✅ Live | 1 |
-| `/api/test/secure` | GET | Yes | Any | ✅ Live | 1 |
-| `/api/admin/stats` | GET | Yes | ADMIN | ✅ Live | 2 |
-| `/api/agent/dashboard` | GET | Yes | AGENT, ADMIN | ✅ Live | 2 |
-| `/api/properties` | POST | Yes | AGENT, ADMIN | ✅ Implemented | 2 |
-| `/api/properties` | GET | No | - | ✅ Implemented | 2 |
-| `/api/properties/{id}` | GET | No | - | ✅ Implemented | 2 |
-| `/api/properties/{id}` | PUT | Yes | Owner | ✅ Implemented | 2 |
-| `/api/properties/my-properties` | GET | Yes | AGENT, ADMIN | ✅ Implemented | 2 |
-| `/actuator/health` | GET | No | - | ✅ Live | 1 |
+| `/api/auth/register` | POST | No | - | Live | 1 |
+| `/api/auth/login` | POST | No | - | Live | 1 |
+| `/api/test/secure` | GET | Yes | Any | Live | 1 |
+| `/api/admin/stats` | GET | Yes | ADMIN | Live | 2 |
+| `/api/agent/dashboard` | GET | Yes | AGENT, ADMIN | Live | 2 |
+| `/api/properties` | POST | Yes | AGENT, ADMIN | Implemented | 2 |
+| `/api/properties` | GET | No | - | Implemented | 2 |
+| `/api/properties/{id}` | GET | No | - | Implemented | 2 |
+| `/api/properties/{id}` | PUT | Yes | Owner | Implemented | 2 |
+| `/api/properties/my-properties` | GET | Yes | AGENT, ADMIN | Implemented | 2 |
+| `/actuator/health` | GET | No | - | Live | 1 |
 
 ---
 
-## 🧪 Testing Summary
+## Testing Summary
 
 ### Sprint 2 Test Additions
 
@@ -249,21 +249,21 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 
 ---
 
-## 🚀 DevOps & Automation
+## DevOps & Automation
 
 ### CI/CD Pipeline Performance
-- ✅ All commits triggered automated builds
-- ✅ 100% build success rate on dev branch
-- ✅ Tests run automatically on push
-- ✅ Docker images built successfully
-- ✅ No pipeline failures
+- All commits triggered automated builds
+- 100% build success rate on dev branch
+- Tests run automatically on push
+- Docker images built successfully
+- No pipeline failures
 
 ### Git Workflow Excellence
-- ✅ Feature branches used for all features
-- ✅ Conventional commit messages maintained
-- ✅ Code reviews conducted (implicit through PR template)
-- ✅ Clean merge history with --no-ff
-- ✅ All branches published to remote
+- Feature branches used for all features
+- Conventional commit messages maintained
+- Code reviews conducted (implicit through PR template)
+- Clean merge history with --no-ff
+- All branches published to remote
 
 ### Branches Created This Sprint
 1. `feature/rbac` - RBAC implementation (merged to dev)
@@ -271,47 +271,47 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 
 ---
 
-## 🎯 Sprint Goal Achievement
+## Sprint Goal Achievement
 
 **Sprint Goal:** Implement role-based access control and property management features with improved development practices
 
-### Goal Assessment: ✅ ACHIEVED
+### Goal Assessment: ACHIEVED
 
 **Evidence:**
-1. ✅ RBAC fully implemented with method-level security
-2. ✅ Property management core features complete
-3. ✅ TDD approach successfully applied to RBAC
-4. ✅ PR template created and ready for use
-5. ✅ Better task breakdown demonstrated with Property feature
-6. ✅ All planned story points delivered (13 SP)
-7. ✅ Zero critical bugs in merged features
-8. ✅ 100% of tests passing on dev branch (33/33)
+1. RBAC fully implemented with method-level security
+2. Property management core features complete
+3. TDD approach successfully applied to RBAC
+4. PR template created and ready for use
+5. Better task breakdown demonstrated with Property feature
+6. All planned story points delivered (13 SP)
+7. Zero critical bugs in merged features
+8. 100% of tests passing on dev branch (33/33)
 
 ---
 
-## 🎬 Demo Highlights
+## Demo Highlights
 
 ### 1. Role-Based Access Control Demo
 
 **Scenario:** Different roles accessing protected endpoints
 
 ```bash
-# Admin accessing admin endpoint ✅
+# Admin accessing admin endpoint
 curl -H "Authorization: Bearer <admin-token>" \
   http://localhost:8080/api/admin/stats
 # Response: 200 OK - Stats returned
 
-# Agent accessing admin endpoint ❌
+# Agent accessing admin endpoint
 curl -H "Authorization: Bearer <agent-token>" \
   http://localhost:8080/api/admin/stats
 # Response: 403 Forbidden
 
-# Agent accessing agent endpoint ✅
+# Agent accessing agent endpoint
 curl -H "Authorization: Bearer <agent-token>" \
   http://localhost:8080/api/agent/dashboard
 # Response: 200 OK - Dashboard returned
 
-# User accessing agent endpoint ❌
+# User accessing agent endpoint
 curl -H "Authorization: Bearer <user-token>" \
   http://localhost:8080/api/agent/dashboard
 # Response: 403 Forbidden
@@ -322,25 +322,25 @@ curl -H "Authorization: Bearer <user-token>" \
 **Scenario:** Creating and managing properties
 
 ```bash
-# Agent creates property ✅
+# Agent creates property
 curl -X POST -H "Authorization: Bearer <agent-token>" \
   -H "Content-Type: application/json" \
   -d '{"title":"Beach House","description":"Ocean view","price":500000}' \
   http://localhost:8080/api/properties
 # Response: 201 Created - Property created with owner = agent
 
-# Public views all properties ✅
+# Public views all properties
 curl http://localhost:8080/api/properties
 # Response: 200 OK - List of all properties
 
-# Owner updates their property ✅
+# Owner updates their property
 curl -X PUT -H "Authorization: Bearer <agent-token>" \
   -H "Content-Type: application/json" \
   -d '{"title":"Beach House - Updated","price":550000}' \
   http://localhost:8080/api/properties/1
 # Response: 200 OK - Property updated
 
-# Different user tries to update ❌
+# Different user tries to update
 curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
   -H "Content-Type: application/json" \
   -d '{"title":"Stolen Property","price":100}' \
@@ -350,30 +350,30 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 🐛 Issues & Resolutions
+## Issues & Resolutions
 
 ### Issue 1: Spring Security Returning 403 Instead of 401
-**Problem:** Tests expected 401 for unauthenticated requests, but received 403  
-**Root Cause:** Spring Security's default behavior returns 403 for all unauthorized access  
-**Resolution:** Updated test expectations to match Spring Security defaults (403)  
+**Problem:** Tests expected 401 for unauthenticated requests, but received 403
+**Root Cause:** Spring Security's default behavior returns 403 for all unauthorized access
+**Resolution:** Updated test expectations to match Spring Security defaults (403)
 **Lesson:** Understand framework defaults before writing tests
 
 ### Issue 2: AccessDeniedException Not Handled
-**Problem:** RBAC tests failing with 500 Internal Server Error instead of 403  
-**Root Cause:** No exception handler for AccessDeniedException  
-**Resolution:** Added @ExceptionHandler in GlobalExceptionHandler  
-**Impact:** All RBAC tests now passing ✅
+**Problem:** RBAC tests failing with 500 Internal Server Error instead of 403
+**Root Cause:** No exception handler for AccessDeniedException
+**Resolution:** Added @ExceptionHandler in GlobalExceptionHandler
+**Impact:** All RBAC tests now passing
 
 ### Issue 3: Property Tests Failing (36 failures)
-**Problem:** Integration tests for properties causing other tests to fail  
-**Status:** Under investigation  
-**Hypothesis:** Test data cleanup or transactional boundary issues  
-**Action:** Tests stashed on feature branch, investigation ongoing  
+**Problem:** Integration tests for properties causing other tests to fail
+**Status:** Under investigation
+**Hypothesis:** Test data cleanup or transactional boundary issues
+**Action:** Tests stashed on feature branch, investigation ongoing
 **Impact:** Property feature not merged to dev yet
 
 ---
 
-## 📊 Velocity Analysis
+## Velocity Analysis
 
 ### Sprint Comparison
 
@@ -387,8 +387,8 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 | Build Success | 100% | 100% | ➡️ |
 | Bugs in Production | 0 | 0 | ➡️ |
 
-**Velocity:** Consistent at 100% completion rate  
-**Quality:** Maintained high standards despite lower story points  
+**Velocity:** Consistent at 100% completion rate
+**Quality:** Maintained high standards despite lower story points
 **Process:** TDD adoption improved development efficiency
 
 ---
@@ -443,7 +443,7 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 📋 Definition of Done - Verification
+## Definition of Done - Verification
 
 ### For Each User Story:
 
@@ -467,33 +467,33 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 🚀 Release Readiness
+## Release Readiness
 
 ### Ready for Production (on main branch)
 - Sprint 1 features: User Registration, JWT Authentication, CI/CD
-- Status: ✅ Production-ready
+- Status: Production-ready
 - Tests: 26/26 passing
 
 ### Ready for Integration (on dev branch)
 - Sprint 2 RBAC feature
-- Status: ✅ Integration-ready
+- Status: Integration-ready
 - Tests: 33/33 passing on dev
 
 ### Pending Integration (on feature branch)
 - Sprint 2 Property Management
-- Status: ⚠️ Testing phase
+- Status: Testing phase
 - Tests: Core functionality complete, integration tests need debugging
 
 ---
 
-## 📅 Next Steps
+## Next Steps
 
 ### Immediate Actions (Sprint 2 Wrap-up)
-1. ✅ Conduct Sprint 2 Review (this document)
-2. ⏳ Debug property management integration tests
-3. ⏳ Merge property-management feature to dev
-4. ⏳ Conduct Sprint 2 Retrospective
-5. ⏳ Release Sprint 2 to main branch
+1. Conduct Sprint 2 Review (this document)
+2. Debug property management integration tests
+3. Merge property-management feature to dev
+4. Conduct Sprint 2 Retrospective
+5. Release Sprint 2 to main branch
 
 ### Sprint 3 Planning Considerations
 1. Complete any pending property features
@@ -505,7 +505,7 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 🎉 Sprint Success Criteria - ACHIEVED ✅
+## Sprint Success Criteria - ACHIEVED
 
 - [x] All planned story points delivered (13 SP)
 - [x] Sprint goal achieved
@@ -519,7 +519,7 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 📝 Stakeholder Feedback
+## Stakeholder Feedback
 
 **Product Owner:** Satisfied with RBAC implementation and property management core features. Ownership validation is exactly what was needed.
 
@@ -529,22 +529,22 @@ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 ---
 
-## 🏆 Sprint 2 Highlights
+## Sprint 2 Highlights
 
-1. ✨ **100% Velocity Maintained** - 13/13 story points delivered
-2. 🎯 **TDD Success** - Zero bugs in RBAC feature
-3. 🔒 **Enhanced Security** - Method-level authorization implemented
-4. 🏢 **Core Property Features** - Complete CRUD with ownership validation
-5. 📈 **Process Improvement** - All retrospective actions applied
-6. 🚀 **Deployment Ready** - RBAC feature merged and tested
-7. 📚 **Comprehensive Docs** - README, DELIVERABLES, and Project Summary completed
-8. 🌲 **Git Excellence** - Clean branching strategy maintained
+1. **100% Velocity Maintained** - 13/13 story points delivered
+2. **TDD Success** - Zero bugs in RBAC feature
+3. **Enhanced Security** - Method-level authorization implemented
+4. **Core Property Features** - Complete CRUD with ownership validation
+5. **Process Improvement** - All retrospective actions applied
+6. **Deployment Ready** - RBAC feature merged and tested
+7. **Comprehensive Docs** - README, DELIVERABLES, and Project Summary completed
+8. **Git Excellence** - Clean branching strategy maintained
 
 ---
 
-**Sprint Status:** ✅ SUCCESSFULLY COMPLETED  
+**Sprint Status:** SUCCESSFULLY COMPLETED
 **Ready for:** Sprint 2 Retrospective and Release Planning
 
-**Prepared by:** Development Team  
-**Review Date:** February 17, 2026  
+**Prepared by:** Development Team
+**Review Date:** February 17, 2026
 **Next Ceremony:** Sprint 2 Retrospective

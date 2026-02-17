@@ -20,22 +20,21 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Slf4j
 public class AuthController {
-    
+
     private final UserService userService;
     private final AuthService authService;
-    
+
     @PostMapping("/register")
     public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
         User user = userService.register(request);
-        
+
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(Map.of(
                         "message", "User registered successfully",
                         "email", user.getEmail(),
-                        "role", user.getRole().name()
-                ));
+                        "role", user.getRole().name()));
     }
-    
+
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         AuthResponse response = authService.login(request);

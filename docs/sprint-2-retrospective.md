@@ -1,18 +1,18 @@
 # Sprint 2 Retrospective - Property Management API
 
-**Date:** February 17, 2026  
-**Sprint:** Sprint 2  
-**Participants:** Development Team  
-**Facilitator:** Scrum Master  
+**Date:** February 17, 2026
+**Sprint:** Sprint 2
+**Participants:** Development Team
+**Facilitator:** Scrum Master
 **Duration:** 1 hour
 
 ---
 
-## 🎯 Sprint 2 Recap
+## Sprint 2 Recap
 
 **Sprint Goal:** Implement role-based access control and property management features with improved development practices
 
-**Outcome:** ✅ Goal Achieved
+**Outcome:** Goal Achieved
 - Delivered: 13/13 story points (100%)
 - RBAC fully implemented and merged
 - Property management core features complete
@@ -20,9 +20,9 @@
 
 ---
 
-## ⭐ What Went Well (Continue Doing)
+## What Went Well (Continue Doing)
 
-### 1. Test-Driven Development (TDD) 🏆
+### 1. Test-Driven Development (TDD)
 
 **What Happened:**
 - Applied TDD approach to RBAC feature (Sprint 1 improvement)
@@ -31,20 +31,20 @@
 - Zero bugs found in RBAC feature
 
 **Impact:**
-- 🎯 Better understanding of requirements upfront
-- 🐛 Prevented bugs rather than fixing them later
-- ⏱️ Faster development (despite writing tests first)
-- 💪 Higher confidence in code quality
-- ✅ Clear acceptance criteria validation
+- Better understanding of requirements upfront
+- Prevented bugs rather than fixing them later
+- Faster development (despite writing tests first)
+- Higher confidence in code quality
+- Clear acceptance criteria validation
 
 **Team Feedback:**
 > "Writing tests first forced us to think about the API design and edge cases before coding. This was a game-changer!" - Developer
 
-**Recommendation:** ✅ **Continue TDD for all features in Sprint 3**
+**Recommendation:** **Continue TDD for all features in Sprint 3**
 
 ---
 
-### 2. Incremental Commits with Conventional Messages 📝
+### 2. Incremental Commits with Conventional Messages
 
 **What Happened:**
 - Maintained small, focused commits throughout Sprint 2
@@ -53,21 +53,21 @@
 - Example: `feat: enable method-level security and implement role-based endpoint restrictions`
 
 **Impact:**
-- 🔍 Easy to track changes
-- 🐞 Simplified debugging (bisect-able history)
-- 📚 Self-documenting code evolution
-- 🔄 Clean revert capability if needed
+- Easy to track changes
+- Simplified debugging (bisect-able history)
+- Self-documenting code evolution
+- Clean revert capability if needed
 
 **Metrics:**
 - Average commit size: ~100 lines
 - Conventional format: 100% compliance
 - Commits in Sprint 2: 8 commits
 
-**Recommendation:** ✅ **Continue this practice - consider adding commit message linting**
+**Recommendation:** **Continue this practice - consider adding commit message linting**
 
 ---
 
-### 3. Feature Branch Workflow 🌳
+### 3. Feature Branch Workflow
 
 **What Happened:**
 - Used dedicated branches for RBAC and Property features
@@ -76,10 +76,10 @@
 - All branches published to remote
 
 **Impact:**
-- 🔒 Safe experimentation without affecting main code
-- 👥 Would enable parallel team development
-- 📊 Clear feature boundaries in history
-- 🔄 Easy to review entire feature in one go
+- Safe experimentation without affecting main code
+- Would enable parallel team development
+- Clear feature boundaries in history
+- Easy to review entire feature in one go
 
 **Branch Strategy:**
 ```
@@ -90,32 +90,32 @@ dev (integration)
 feature/rbac  feature/property-management
 ```
 
-**Recommendation:** ✅ **Continue - consider adding branch protection rules**
+**Recommendation:** **Continue - consider adding branch protection rules**
 
 ---
 
-### 4. Application of Sprint 1 Improvements ✨
+### 4. Application of Sprint 1 Improvements
 
 **What Happened:**
 - Successfully applied all 3 improvements from Sprint 1 retrospective:
-  1. ✅ TDD for security features (RBAC)
-  2. ✅ PR checklist template created
-  3. ✅ Better task breakdown (Property feature)
+  1. TDD for security features (RBAC)
+  2. PR checklist template created
+  3. Better task breakdown (Property feature)
 
 **Impact:**
-- 🎓 Demonstrates continuous improvement
-- 📈 Process maturity increasing
-- 💡 Retrospectives are actionable, not just discussion
-- 🔄 Closed feedback loop
+- Demonstrates continuous improvement
+- Process maturity increasing
+- Retrospectives are actionable, not just discussion
+- Closed feedback loop
 
 **Team Feedback:**
 > "Seeing our retrospective actions actually implemented and working is motivating. We're truly getting better each sprint!"
 
-**Recommendation:** ✅ **Continue prioritizing retrospective action items**
+**Recommendation:** **Continue prioritizing retrospective action items**
 
 ---
 
-### 5. Comprehensive Documentation 📚
+### 5. Comprehensive Documentation
 
 **What Happened:**
 - Created extensive documentation:
@@ -126,18 +126,18 @@ feature/rbac  feature/property-management
 - Updated documentation as features were added
 
 **Impact:**
-- 📖 Knowledge transfer made easy
-- 🎯 Clear project status for stakeholders
-- 🔍 Easy onboarding for new team members
-- 🏆 Professional deliverable quality
+- Knowledge transfer made easy
+- Clear project status for stakeholders
+- Easy onboarding for new team members
+- Professional deliverable quality
 
-**Recommendation:** ✅ **Continue - documentation is a key differentiator**
+**Recommendation:** **Continue - documentation is a key differentiator**
 
 ---
 
-## 🔧 What Could Be Improved (Change/Add)
+## What Could Be Improved (Change/Add)
 
-### 1. Test Data Management ⚠️
+### 1. Test Data Management
 
 **Problem:**
 - Property integration tests causing 36 test failures
@@ -186,18 +186,18 @@ public class PropertyManagementIntegrationTest {
 ```
 
 **Action Items for Sprint 3:**
-1. 🎯 Debug property test failures (Priority: High)
-2. 📝 Implement @Transactional on test classes
-3. 🧹 Add proper tearDown methods
-4. 📚 Document test data management strategy
-5. ✅ Verify all tests pass independently and together
+1. Debug property test failures (Priority: High)
+2. Implement @Transactional on test classes
+3. Add proper tearDown methods
+4. Document test data management strategy
+5. Verify all tests pass independently and together
 
-**Owner:** Development Team  
+**Owner:** Development Team
 **Due:** Sprint 3 Day 1
 
 ---
 
-### 2. Early Merge to Dev Branch 🔄
+### 2. Early Merge to Dev Branch
 
 **Problem:**
 - Property feature developed entirely on feature branch
@@ -206,10 +206,10 @@ public class PropertyManagementIntegrationTest {
 - Test failures blocked dev merge
 
 **Impact:**
-- ⏱️ Delayed integration
-- 🐛 Late discovery of issues
-- 🔒 Feature locked in branch
-- 👥 Would block team collaboration
+- Delayed integration
+- Late discovery of issues
+- Feature locked in branch
+- Would block team collaboration
 
 **Current Flow:**
 ```
@@ -231,23 +231,23 @@ Feature Branch → [Controller] → Merge to Dev
 - Use feature flags if needed for incomplete features
 
 **Benefits:**
-- 🔄 Continuous integration (true CI)
-- 🐛 Earlier issue detection
-- 👥 Better team visibility
-- 🚀 Easier rollback if needed
+- Continuous integration (true CI)
+- Earlier issue detection
+- Better team visibility
+- Easier rollback if needed
 
 **Action Items for Sprint 3:**
-1. 📋 Define "merge-worthy" criteria
-2. 🔄 Merge to dev at least once per day
-3. 🏷️ Consider feature flags for WIP features
-4. 📊 Track integration frequency
+1. Define "merge-worthy" criteria
+2. Merge to dev at least once per day
+3. Consider feature flags for WIP features
+4. Track integration frequency
 
-**Owner:** Development Team  
+**Owner:** Development Team
 **Due:** Sprint 3 (ongoing)
 
 ---
 
-### 3. Test Suite Execution Time ⏱️
+### 3. Test Suite Execution Time
 
 **Observation:**
 - Test suite growing (41 tests now)
@@ -302,18 +302,18 @@ public class UserServiceTest { }
 ```
 
 **Action Items for Sprint 3:**
-1. ⏱️ Measure current test execution time
-2. 📊 Set baseline and target metrics
-3. 🏗️ Implement shared test context
-4. 🏷️ Add test categories (unit/integration)
-5. ⚡ Explore parallel test execution
+1. Measure current test execution time
+2. Set baseline and target metrics
+3. Implement shared test context
+4. Add test categories (unit/integration)
+5. Explore parallel test execution
 
-**Owner:** Development Team  
+**Owner:** Development Team
 **Due:** Sprint 3 Mid-sprint
 
 ---
 
-### 4. API Documentation and Testing Tools 📡
+### 4. API Documentation and Testing Tools
 
 **Gap Identified:**
 - No interactive API documentation (Swagger/OpenAPI)
@@ -322,10 +322,10 @@ public class UserServiceTest { }
 - Difficult for stakeholders to test API
 
 **Impact:**
-- 📝 Time-consuming manual endpoint testing
-- 🔄 No easy way for QA to test
-- 📚 Documentation separate from code
-- 🎯 Harder to demo to stakeholders
+- Time-consuming manual endpoint testing
+- No easy way for QA to test
+- Documentation separate from code
+- Harder to demo to stakeholders
 
 **Proposed Solution:**
 
@@ -359,26 +359,26 @@ Content-Type: application/json
 ```
 
 **Action Items for Sprint 3:**
-1. 📦 Add SpringDoc OpenAPI dependency
-2. 📝 Configure OpenAPI annotations
-3. 🎨 Customize Swagger UI
-4. 📤 Export Postman collection
-5. 📚 Update README with API docs link
+1. Add SpringDoc OpenAPI dependency
+2. Configure OpenAPI annotations
+3. Customize Swagger UI
+4. Export Postman collection
+5. Update README with API docs link
 
-**Owner:** Development Team  
+**Owner:** Development Team
 **Due:** Sprint 3 Week 1
 
 ---
 
-### 5. Monitoring and Observability Gaps 📊
+### 5. Monitoring and Observability Gaps
 
 **Current State:**
-- ✅ Spring Boot Actuator enabled
-- ✅ Health endpoint available
-- ❌ No metrics collection
-- ❌ No request tracing
-- ❌ No error rate monitoring
-- ❌ No performance metrics
+- Spring Boot Actuator enabled
+- Health endpoint available
+- No metrics collection
+- No request tracing
+- No error rate monitoring
+- No performance metrics
 
 **Missing Capabilities:**
 - Request/response times
@@ -408,11 +408,11 @@ management:
 @Service
 public class PropertyService {
     private final Counter propertyCreated;
-    
+
     public PropertyService(MeterRegistry registry) {
         this.propertyCreated = registry.counter("properties.created");
     }
-    
+
     public PropertyResponse createProperty(...) {
         // ... create logic
         propertyCreated.increment();
@@ -428,7 +428,7 @@ public class PropertyService {
 public class PropertyController {
     @PostMapping
     public ResponseEntity<PropertyResponse> createProperty(...) {
-        log.info("Creating property: title={}, owner={}", 
+        log.info("Creating property: title={}, owner={}",
                  request.getTitle(), authentication.getName());
         // ...
     }
@@ -436,13 +436,13 @@ public class PropertyController {
 ```
 
 **Action Items for Sprint 3:**
-1. 📊 Enable metrics endpoints
-2. 📈 Add custom business metrics
-3. 📝 Implement structured logging
-4. 🎯 Define key performance indicators (KPIs)
-5. 📚 Document monitoring strategy
+1. Enable metrics endpoints
+2. Add custom business metrics
+3. Implement structured logging
+4. Define key performance indicators (KPIs)
+5. Document monitoring strategy
 
-**Owner:** Development Team  
+**Owner:** Development Team
 **Due:** Sprint 3 (monitoring story)
 
 ---
@@ -477,11 +477,11 @@ public class PropertyController {
 - Priority Distribution: 2 High, 3 Medium, 3 Low
 
 ### Team Health
-- ✅ Sprint goal achieved
-- ✅ No overtime required
-- ✅ Team morale: High
-- ✅ Process improvements working
-- ⚠️ Test debugging needed
+- Sprint goal achieved
+- No overtime required
+- Team morale: High
+- Process improvements working
+- Test debugging needed
 
 ---
 
@@ -535,41 +535,41 @@ public class PropertyController {
 
 ---
 
-## 🌟 Team Shoutouts
+## Team Shoutouts
 
-### 🏆 TDD Champion
+### TDD Champion
 For successfully applying Test-Driven Development to the RBAC feature, resulting in zero bugs and a smooth implementation!
 
-### 📚 Documentation Excellence
+### Documentation Excellence
 For creating comprehensive project documentation (3,000+ lines) that makes the project professional and maintainable!
 
-### 🎯 100% Velocity
+### 100% Velocity
 For maintaining 100% sprint completion rate across both sprints (18 SP + 13 SP = 31 SP delivered)!
 
 ---
 
-## 🎯 Sprint 3 Focus Areas
+## Sprint 3 Focus Areas
 
 Based on this retrospective, Sprint 3 should focus on:
 
 ### Must Have (P0)
-1. ✅ Fix property test failures
-2. ✅ Merge property management to dev
-3. ✅ Implement test isolation strategy
+1. Fix property test failures
+2. Merge property management to dev
+3. Implement test isolation strategy
 
 ### Should Have (P1)
-4. 📡 Add OpenAPI documentation
-5. ⏱️ Optimize test execution time
-6. 🔄 Establish daily merge cadence
+4. Add OpenAPI documentation
+5. Optimize test execution time
+6. Establish daily merge cadence
 
 ### Nice to Have (P2)
-7. 📊 Add metrics and monitoring
-8. 📝 Implement structured logging
-9. 🎨 Create Postman collection
+7. Add metrics and monitoring
+8. Implement structured logging
+9. Create Postman collection
 
 ---
 
-## 💭 Retrospective Reflection
+## Retrospective Reflection
 
 ### What Made This Sprint Successful?
 
@@ -607,41 +607,41 @@ Based on this retrospective, Sprint 3 should focus on:
 
 ---
 
-## 📋 Retrospective Format Feedback
+## Retrospective Format Feedback
 
-**Format Used:** What Went Well / What Could Be Improved  
-**Effectiveness:** ✅ Excellent - Clear structure, actionable outcomes  
-**Duration:** 1 hour  
-**Participation:** 100%  
-**Action Items Generated:** 8  
+**Format Used:** What Went Well / What Could Be Improved
+**Effectiveness:** Excellent - Clear structure, actionable outcomes
+**Duration:** 1 hour
+**Participation:** 100%
+**Action Items Generated:** 8
 
-**Keep for Next Retrospective:** ✅ Same format works well
+**Keep for Next Retrospective:** Same format works well
 
 ---
 
-## 🎉 Closing Thoughts
+## Closing Thoughts
 
 Sprint 2 was a success! We maintained our 100% velocity, applied all retrospective improvements from Sprint 1, and delivered important features (RBAC and Property Management core).
 
 Key wins:
-- ✅ TDD approach worked excellently
-- ✅ Process improvements were applied, not just discussed
-- ✅ Documentation is now comprehensive and professional
-- ✅ Code quality remains high
+- TDD approach worked excellently
+- Process improvements were applied, not just discussed
+- Documentation is now comprehensive and professional
+- Code quality remains high
 
 Areas for Sprint 3:
-- 🔧 Fix property tests quickly
-- 🔄 Integrate more frequently
-- 📊 Add observability
+- Fix property tests quickly
+- Integrate more frequently
+- Add observability
 
-**Team morale:** High 📈  
-**Confidence in process:** Growing 🌱  
-**Ready for Sprint 3:** Absolutely! 🚀
+**Team morale:** High
+**Confidence in process:** Growing
+**Ready for Sprint 3:** Absolutely!
 
 ---
 
-**Retrospective Completed:** February 17, 2026  
-**Next Retrospective:** End of Sprint 3  
+**Retrospective Completed:** February 17, 2026
+**Next Retrospective:** End of Sprint 3
 **Action Items Tracked:** GitHub Issues / Sprint Backlog
 
-**Remember:** 🔄 Continuous improvement is not a one-time event, it's a mindset!
+**Remember:** Continuous improvement is not a one-time event, it's a mindset!

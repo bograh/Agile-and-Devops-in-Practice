@@ -29,12 +29,12 @@
 
 This project is a **secure property listing REST API** built to demonstrate:
 
-✅ **JWT Authentication** with email/password login  
-✅ **Role-Based Access Control** (USER, AGENT, ADMIN)  
-✅ **Property Management** with ownership validation  
-✅ **CI/CD Pipeline** with GitHub Actions  
-✅ **Clean Architecture** with service layer abstraction  
-✅ **Test-Driven Development** with 80%+ coverage  
+✅ **JWT Authentication** with email/password login
+✅ **Role-Based Access Control** (USER, AGENT, ADMIN)
+✅ **Property Management** with ownership validation
+✅ **CI/CD Pipeline** with GitHub Actions
+✅ **Clean Architecture** with service layer abstraction
+✅ **Test-Driven Development** with 80%+ coverage
 ✅ **Agile Methodology** with sprint planning and retrospectives
 
 **Built with:**
@@ -490,21 +490,21 @@ This project was built following Agile methodology with 2 sprints:
 ## 🌟 Key Achievements
 
 ### Technical Excellence
-✅ **JWT Authentication** with secure token generation  
-✅ **RBAC Implementation** with method-level security  
-✅ **Ownership Validation** for resource access control  
-✅ **Clean Architecture** with clear separation of concerns  
-✅ **Comprehensive Testing** with unit and integration tests  
-✅ **Docker Support** with multi-stage builds  
+✅ **JWT Authentication** with secure token generation
+✅ **RBAC Implementation** with method-level security
+✅ **Ownership Validation** for resource access control
+✅ **Clean Architecture** with clear separation of concerns
+✅ **Comprehensive Testing** with unit and integration tests
+✅ **Docker Support** with multi-stage builds
 ✅ **CI/CD Pipeline** with automated testing
 
 ### Agile & DevOps
-✅ **Sprint Planning** with story points and DoD  
-✅ **Feature Branching** with Git workflow  
-✅ **Incremental Development** with small commits  
-✅ **Sprint Reviews** with demo and metrics  
-✅ **Sprint Retrospectives** with actionable improvements  
-✅ **Continuous Integration** with GitHub Actions  
+✅ **Sprint Planning** with story points and DoD
+✅ **Feature Branching** with Git workflow
+✅ **Incremental Development** with small commits
+✅ **Sprint Reviews** with demo and metrics
+✅ **Sprint Retrospectives** with actionable improvements
+✅ **Continuous Integration** with GitHub Actions
 ✅ **Infrastructure as Code** with Dockerfile
 
 ---
@@ -576,5 +576,5 @@ Built following:
 
 **⭐ If you find this project helpful, please consider giving it a star!**
 
-**Built with ❤️ demonstrating Agile and DevOps excellence**  
+**Built with ❤️ demonstrating Agile and DevOps excellence**
 **February 2026**
