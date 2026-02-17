@@ -1,13 +1,13 @@
 # Final Submission - Agile and DevOps in Practice
 
-**Student Name:** [Your Name]  
-**Course:** Agile and DevOps in Practice  
-**Submission Date:** February 17, 2026  
+**Student Name:** [Your Name]
+**Course:** Agile and DevOps in Practice
+**Submission Date:** February 17, 2026
 **Project:** Property Management REST API
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Executive Summary](#executive-summary)
 2. [Sprint 0: Planning](#sprint-0-planning)
@@ -19,7 +19,7 @@
 
 ---
 
-## 📖 Executive Summary
+## Executive Summary
 
 ### Project Overview
 
@@ -29,9 +29,9 @@ This submission demonstrates the complete application of Agile principles and De
 
 | Sprint | Story Points Planned | Story Points Delivered | Velocity | Status |
 |--------|---------------------|------------------------|----------|--------|
-| Sprint 1 | 18 SP | 18 SP | 100% | ✅ Complete |
-| Sprint 2 | 13 SP | 13 SP | 100% | ✅ Complete |
-| **Total** | **31 SP** | **31 SP** | **100%** | ✅ **Success** |
+| Sprint 1 | 18 SP | 18 SP | 100% | Complete |
+| Sprint 2 | 13 SP | 13 SP | 100% | Complete |
+| **Total** | **31 SP** | **31 SP** | **100%** | **Success** |
 
 ### Technology Stack
 
@@ -45,16 +45,16 @@ This submission demonstrates the complete application of Agile principles and De
 
 ### Key Outcomes
 
-✅ **Complete Feature Delivery:** 31 story points across 2 sprints (100%)  
-✅ **Professional Git Workflow:** 33+ commits with conventional messages  
-✅ **Automated CI/CD:** GitHub Actions pipeline with automated testing  
-✅ **Comprehensive Testing:** 41+ tests with 80%+ coverage  
-✅ **Process Improvement:** Sprint 1 retrospective actions applied in Sprint 2  
-✅ **Complete Documentation:** 4,200+ lines across 8 documents  
+**Complete Feature Delivery:** 31 story points across 2 sprints (100%)
+**Professional Git Workflow:** 33+ commits with conventional messages
+**Automated CI/CD:** GitHub Actions pipeline with automated testing
+**Comprehensive Testing:** 41+ tests with 80%+ coverage
+**Process Improvement:** Sprint 1 retrospective actions applied in Sprint 2
+**Complete Documentation:** 4,200+ lines across 8 documents
 
 ---
 
-## 🎯 Sprint 0: Planning
+## Sprint 0: Planning
 
 ### 1. Product Vision
 
@@ -126,11 +126,11 @@ Sprint: 1
 
 **Refinement Evidence:**
 All user stories include:
-✅ Clear "As a... I want to... So that..." format  
-✅ Detailed acceptance criteria  
-✅ Story point estimates  
-✅ Priority assignments  
-✅ Sprint allocation  
+Clear "As a... I want to... So that..." format
+Detailed acceptance criteria
+Story point estimates
+Priority assignments
+Sprint allocation
 
 ---
 
@@ -189,13 +189,13 @@ Our team's Definition of Done ensures quality and completeness:
 
 ---
 
-## 🚀 Sprint 1: Execution
+## Sprint 1: Execution
 
 ### 1. Delivered Work
 
 **Sprint 1 completed all planned user stories (18/18 SP - 100%)**
 
-#### ✅ US1: User Registration (5 SP)
+#### US1: User Registration (5 SP)
 
 **Implementation:**
 - Created `User` entity with Spring Security integration
@@ -206,16 +206,8 @@ Our team's Definition of Done ensures quality and completeness:
 - BCrypt password encryption implemented
 
 **Endpoints Delivered:**
-```http
-POST /api/auth/register
-Request: { "email": "user@example.com", "password": "password123" }
-Response: 201 Created
-{
-  "message": "User registered successfully",
-  "email": "user@example.com",
-  "role": "USER"
-}
-```
+- `POST /api/auth/register` - User registration endpoint
+- Returns 201 with user details on success
 
 **Files Created:**
 - [User.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/User.java)
@@ -228,9 +220,9 @@ Response: 201 Created
 **Test Coverage:**
 - 4 unit tests in `UserServiceTest.java`
 - 5 integration tests in `AuthControllerIntegrationTest.java`
-- **Result:** 9/9 tests passing ✅
+- **Result:** 9/9 tests passing
 
-#### ✅ US2: JWT Authentication (8 SP)
+#### US2: JWT Authentication (8 SP)
 
 **Implementation:**
 - Created `JwtTokenProvider` for token generation and validation
@@ -241,24 +233,8 @@ Response: 201 Created
 - Token includes role claims for authorization
 
 **Endpoints Delivered:**
-```http
-POST /api/auth/login
-Request: { "email": "user@example.com", "password": "password123" }
-Response: 200 OK
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "email": "user@example.com",
-  "role": "USER"
-}
-
-GET /api/test/secure
-Authorization: Bearer <jwt-token>
-Response: 200 OK
-{
-  "message": "This is a protected endpoint",
-  "user": "user@example.com"
-}
-```
+- `POST /api/auth/login` - Authentication endpoint returning JWT token
+- `GET /api/test/secure` - Protected endpoint requiring JWT authorization
 
 **Files Created:**
 - [JwtTokenProvider.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/JwtTokenProvider.java)
@@ -270,9 +246,9 @@ Response: 200 OK
 **Test Coverage:**
 - 6 unit tests in `JwtTokenProviderTest.java`
 - 5 integration tests in `AuthenticationIntegrationTest.java`
-- **Result:** 11/11 tests passing ✅
+- **Result:** 11/11 tests passing
 
-#### ✅ CI/CD Pipeline (5 SP)
+#### CI/CD Pipeline (5 SP)
 
 **Implementation:**
 - GitHub Actions workflow configured
@@ -299,9 +275,15 @@ Response: 200 OK
 - Health check included
 
 **Evidence:**
-- ✅ Pipeline running successfully: [Screenshot](screenshots/pipeline-screenshot.png)
-- ✅ Tests executing in CI: [Screenshot](screenshots/tests-screenshot.png)
-- ✅ PR validation: [Screenshot](screenshots/ci-pipeline-on-merge-requests.png)
+
+![Pipeline Success](screenshots/pipeline-screenshot.png)
+*Figure 1: Pipeline running successfully*
+
+![Test Execution](screenshots/tests-screenshot.png)
+*Figure 2: Tests executing in CI*
+
+![PR Validation](screenshots/ci-pipeline-on-merge-requests.png)
+*Figure 3: PR validation workflow*
 
 ---
 
@@ -311,14 +293,7 @@ Response: 200 OK
 
 #### Git Workflow Demonstrated
 
-**Branching Strategy:**
-```
-main (production)
-  ↑
-dev (integration)
-  ↑                    ↑                    ↑
-feature/user-reg   feature/jwt-auth   feature/ci-pipeline
-```
+**Branching Strategy:** Feature branches merge to dev, dev merges to main. Flow: feature/* → dev → main.
 
 **Commit History Analysis:**
 
@@ -337,25 +312,23 @@ feature/user-reg   feature/jwt-auth   feature/ci-pipeline
 12. `release: Sprint 1 - User Authentication and CI/CD Pipeline`
 
 **Commit Characteristics:**
-- ✅ **Incremental:** Small, focused commits throughout development
-- ✅ **Conventional:** All commits follow conventional format (feat, fix, test, docs, ci)
-- ✅ **Descriptive:** Clear commit messages explaining changes
-- ✅ **Professional:** No "big-bang" commits; continuous integration
+- **Incremental:** Small, focused commits throughout development
+- **Conventional:** All commits follow conventional format (feat, fix, test, docs, ci)
+- **Descriptive:** Clear commit messages explaining changes
+- **Professional:** No "big-bang" commits; continuous integration
 
 **Feature Branches:**
-- ✅ `feature/user-registration` - User registration implementation
-- ✅ `feature/jwt-authentication` - JWT authentication implementation
-- ✅ `feature/ci-pipeline` - CI/CD setup
+- `feature/user-registration` - User registration implementation
+- `feature/jwt-authentication` - JWT authentication implementation
+- `feature/ci-pipeline` - CI/CD setup
 
 **Merge Strategy:**
-- ✅ No-fast-forward merges (`--no-ff`) for clear history
-- ✅ All features merged to `dev` first
-- ✅ `dev` merged to `main` for Sprint 1 release
+- No-fast-forward merges (`--no-ff`) for clear history
+- All features merged to `dev` first
+- `dev` merged to `main` for Sprint 1 release
 
 **View Complete History:**
-```bash
-git log --graph --all --oneline
-```
+*(View complete history in repository)*
 
 ---
 
@@ -365,67 +338,33 @@ git log --graph --all --oneline
 
 **File:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
 
-```yaml
-name: CI Pipeline
+**Pipeline Steps:**
+1. Checkout code
+2. Setup JDK 21
+3. Build with Maven
+4. Run automated tests
+5. Upload test results
 
-on:
-  push:
-    branches: [ main, dev ]
-  pull_request:
-    branches: [ main, dev ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up JDK 21
-        uses: actions/setup-java@v3
-        with:
-          java-version: '21'
-          distribution: 'temurin'
-          
-      - name: Build with Maven
-        run: mvn -B package --file Property-Management-API/pom.xml
-        
-      - name: Run tests
-        run: mvn test --file Property-Management-API/pom.xml
-        
-      - name: Upload test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: Property-Management-API/target/surefire-reports/
-```
-
-#### Pipeline Execution Evidence
-
-**Successful Pipeline Run:**
 ![Pipeline Success](screenshots/pipeline-screenshot.png)
+*Figure 4: Successful pipeline execution showing all stages passing*
 
-**Pipeline triggered on Pull Request:**
 ![PR Pipeline](screenshots/ci-pipeline-on-merge-requests.png)
+*Figure 5: Automated pipeline trigger on pull requests*
 
 **Pipeline Metrics:**
-- ✅ **Success Rate:** 100%
-- ✅ **Average Build Time:** ~2-3 minutes
-- ✅ **Tests Executed:** 26 tests per run
-- ✅ **Triggers:** 15+ pipeline executions during Sprint 1
+- **Success Rate:** 100%
+- **Average Build Time:** ~2-3 minutes
+- **Tests Executed:** 26 tests per run
+- **Triggers:** 15+ pipeline executions during Sprint 1
 
 #### Docker Build Evidence
 
 **Dockerfile:** [Property-Management-API/Dockerfile](Property-Management-API/Dockerfile)
 
 **Build Success:**
-```bash
-$ docker build -t property-api:latest Property-Management-API
-Successfully built 7f8a9b2c3d4e
-Successfully tagged property-api:latest
-
-$ docker run -p 8080:8080 property-api:latest
-Started PropertyManagementApiApplication in 3.456 seconds
-```
+- Docker image built successfully
+- Application starts in ~3.5 seconds
+- Port 8080 exposed and accessible
 
 **Image Characteristics:**
 - Multi-stage build (build + runtime)
@@ -453,60 +392,13 @@ Started PropertyManagementApiApplication in 3.456 seconds
 #### Test Execution Results
 
 ![Test Results](screenshots/tests-screenshot.png)
-
-**Maven Test Output:**
-```
-[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0
-[INFO] BUILD SUCCESS
-[INFO] Total time:  18.456 s
-```
+*Figure 6: Complete test suite execution - 26/26 tests passing*
 
 #### Sample Test File
 
-**UserServiceTest.java** (Unit Tests with Mockito):
-```java
-@ExtendWith(MockitoExtension.class)
-class UserServiceTest {
-    @Mock
-    private UserRepository userRepository;
-    
-    @Mock
-    private PasswordEncoder passwordEncoder;
-    
-    @InjectMocks
-    private UserService userService;
-    
-    @Test
-    void testRegisterUser_Success() {
-        // Test implementation
-        // Result: ✅ Pass
-    }
-    
-    @Test
-    void testRegisterUser_DuplicateEmail_ThrowsException() {
-        // Test implementation
-        // Result: ✅ Pass
-    }
-}
-```
+**Unit Tests:** UserServiceTest.java uses @Mock annotations with Mockito to test user registration success/failure scenarios.
 
-**AuthenticationIntegrationTest.java** (Integration Tests with MockMvc):
-```java
-@SpringBootTest
-@AutoConfigureMockMvc
-class AuthenticationIntegrationTest {
-    @Autowired
-    private MockMvc mockMvc;
-    
-    @Test
-    void testSuccessfulAuthentication() throws Exception {
-        // Register user
-        // Login with credentials
-        // Verify JWT token received
-        // Result: ✅ Pass
-    }
-}
-```
+**Integration Tests:** AuthenticationIntegrationTest.java uses @SpringBootTest with MockMvc to test end-to-end authentication flow including registration, login, and JWT token verification.
 
 **Test Files:**
 - [UserServiceTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/service/UserServiceTest.java)
@@ -532,65 +424,34 @@ class AuthenticationIntegrationTest {
 **Document:** [docs/sprint-1-review.md](docs/sprint-1-review.md)
 
 #### Sprint Goal Achievement
-✅ **Sprint Goal:** "Establish authentication foundation and CI/CD pipeline"  
-✅ **Status:** ACHIEVED (100% of stories delivered)
+**Sprint Goal:** "Establish authentication foundation and CI/CD pipeline"
+**Status:** ACHIEVED (100% of stories delivered)
 
 #### Delivered Features Summary
 
 | User Story | Story Points | Status | Tests |
 |------------|--------------|--------|-------|
-| US1: User Registration | 5 SP | ✅ Complete | 9/9 ✅ |
-| US2: JWT Authentication | 8 SP | ✅ Complete | 17/17 ✅ |
-| CI/CD Pipeline | 5 SP | ✅ Complete | N/A |
-| **Total** | **18 SP** | **✅ 100%** | **26/26 ✅** |
+| US1: User Registration | 5 SP | Complete | 9/9 |
+| US2: JWT Authentication | 8 SP | Complete | 17/17 |
+| CI/CD Pipeline | 5 SP | Complete | N/A |
+| **Total** | **18 SP** | **100%** | **26/26** |
 
 #### API Endpoints Delivered
 
 | Endpoint | Method | Auth | Description | Status |
 |----------|--------|------|-------------|--------|
-| `/api/auth/register` | POST | No | User registration | ✅ Working |
-| `/api/auth/login` | POST | No | JWT authentication | ✅ Working |
-| `/api/test/secure` | GET | Yes | Protected endpoint | ✅ Working |
-| `/actuator/health` | GET | No | Health check | ✅ Working |
+| `/api/auth/register` | POST | No | User registration | Working |
+| `/api/auth/login` | POST | No | JWT authentication | Working |
+| `/api/test/secure` | GET | Yes | Protected endpoint | Working |
+| `/actuator/health` | GET | No | Health check | Working |
 
 #### Demo Screenshots
 
-**Registration Success:**
-```bash
-$ curl -X POST http://localhost:8080/api/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{"email":"agent@example.com","password":"password123"}'
+**Registration Success:** POST to `/api/auth/register` returned 201 with confirmation message and user details.
 
-{
-  "message": "User registered successfully",
-  "email": "agent@example.com",
-  "role": "USER"
-}
-```
+**Login Success:** POST to `/api/auth/login` returned 200 with valid JWT token for authenticated endpoints.
 
-**Login Success:**
-```bash
-$ curl -X POST http://localhost:8080/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"agent@example.com","password":"password123"}'
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZ2VudEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzA4MTcwMDAwLCJleHAiOjE3MDgxNzM2MDB9.signature",
-  "email": "agent@example.com",
-  "role": "USER"
-}
-```
-
-**Protected Endpoint Access:**
-```bash
-$ curl -H "Authorization: Bearer <jwt-token>" \
-  http://localhost:8080/api/test/secure
-
-{
-  "message": "This is a protected endpoint",
-  "user": "agent@example.com"
-}
-```
+**Protected Endpoint Access:** GET to `/api/test/secure` with Bearer token returned 200 with protected resource.
 
 #### Sprint Metrics
 
@@ -610,7 +471,7 @@ $ curl -H "Authorization: Bearer <jwt-token>" \
 
 **Document:** [docs/sprint-1-retrospective.md](docs/sprint-1-retrospective.md)
 
-#### What Went Well ✅
+#### What Went Well
 
 1. **Clean Architecture Implementation**
    - Clear separation of concerns (controller, service, repository)
@@ -667,11 +528,11 @@ $ curl -H "Authorization: Bearer <jwt-token>" \
 
 ---
 
-## 🔄 Sprint 2: Execution & Improvement
+## Sprint 2: Execution & Improvement
 
 ### 1. Process Improvements Applied
 
-#### ✅ Improvement #1: Test-Driven Development (TDD)
+#### Improvement #1: Test-Driven Development (TDD)
 
 **Sprint 1 Issue:** Tests written after implementation
 
@@ -685,10 +546,10 @@ $ curl -H "Authorization: Bearer <jwt-token>" \
 5. All 6 tests passed on first implementation run
 
 **Result:**
-- ✅ **Zero bugs** in RBAC implementation
-- ✅ **Better requirement understanding** upfront
-- ✅ **Higher confidence** in code quality
-- ✅ **Faster development** (despite writing tests first)
+- **Zero bugs** in RBAC implementation
+- **Better requirement understanding** upfront
+- **Higher confidence** in code quality
+- **Faster development** (despite writing tests first)
 
 **Evidence:**
 - Commit: `test: add RBAC integration tests (TDD approach)` came BEFORE
@@ -696,7 +557,7 @@ $ curl -H "Authorization: Bearer <jwt-token>" \
 
 **Test File:** [RBACIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
 
-#### ✅ Improvement #2: PR Checklist Template
+#### Improvement #2: PR Checklist Template
 
 **Sprint 1 Issue:** No formal PR review process
 
@@ -710,36 +571,14 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 - Breaking changes section
 - Related issues/stories
 
-**PR Template Sections:**
-```markdown
-## Description
-[Describe your changes]
-
-## Type of Change
-- [ ] Bug fix
-- [ ] New feature
-- [ ] Breaking change
-- [ ] Documentation update
-
-## Testing Checklist
-- [ ] Unit tests added/updated
-- [ ] Integration tests added/updated
-- [ ] All tests pass locally
-- [ ] CI pipeline passes
-
-## Code Quality
-- [ ] Code follows team conventions
-- [ ] Comments added for complex logic
-- [ ] No console.log or debug code
-- [ ] Security best practices followed
-```
+**PR Template Sections:** Description, Type of Change (bug/feature/breaking/docs), Testing Checklist (unit/integration tests, CI passes), Code Quality (conventions, comments, security).
 
 **Result:**
-- ✅ Standardized review process
-- ✅ Consistent quality checks
-- ✅ Nothing gets missed
+- Standardized review process
+- Consistent quality checks
+- Nothing gets missed
 
-#### ✅ Improvement #3: Better Task Breakdown
+#### Improvement #3: Better Task Breakdown
 
 **Sprint 1 Issue:** Large stories (8 SP) hard to track
 
@@ -753,9 +592,9 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 5. Documentation and refinement (Day 5)
 
 **Result:**
-- ✅ Clear daily progress
-- ✅ Easier to track completion
-- ✅ Better sprint burndown
+- Clear daily progress
+- Easier to track completion
+- Better sprint burndown
 
 **Evidence:**
 - Separate commits for each sub-task
@@ -767,7 +606,7 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 
 **Sprint 2 completed all planned user stories (13/13 SP - 100%)**
 
-#### ✅ US3: Role-Based Access Control (5 SP)
+#### US3: Role-Based Access Control (5 SP)
 
 **Implementation:**
 - Enabled method-level security with `@EnableMethodSecurity`
@@ -778,36 +617,19 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 - Comprehensive RBAC integration tests (TDD approach)
 
 **Endpoints Delivered:**
-```http
-GET /api/admin/stats
-Authorization: Bearer <admin-jwt>
-@PreAuthorize("hasRole('ADMIN')")
-Response: 200 OK (admin only)
-
-GET /api/agent/dashboard
-Authorization: Bearer <agent-jwt>
-@PreAuthorize("hasAnyRole('AGENT', 'ADMIN')")
-Response: 200 OK (agent or admin)
-```
+- `GET /api/admin/stats` - Admin-only endpoint with `@PreAuthorize("hasRole('ADMIN')")` 
+- `GET /api/agent/dashboard` - Agent/Admin endpoint with `@PreAuthorize("hasAnyRole('AGENT', 'ADMIN')")`
 
 **Files Created:**
 - [AdminController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AdminController.java)
 - [AgentController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AgentController.java)
 - [RBACIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
 
-**Test Coverage (TDD):**
-```java
-✅ testAdminEndpoint_WithAdminRole_ReturnsOk()
-✅ testAdminEndpoint_WithAgentRole_ReturnsForbidden()
-✅ testAdminEndpoint_WithUserRole_ReturnsForbidden()
-✅ testAgentEndpoint_WithAgentRole_ReturnsOk()
-✅ testAgentEndpoint_WithAdminRole_ReturnsOk()
-✅ testAgentEndpoint_WithUserRole_ReturnsForbidden()
-```
+**Test Coverage (TDD):** 6 tests written before implementation covering admin/agent/user role access patterns for both admin-only and agent-accessible endpoints.
 
-**Result:** 6/6 tests passing ✅ (written BEFORE implementation)
+**Result:** 6/6 tests passing (written BEFORE implementation)
 
-#### ✅ US4: Property Management (8 SP)
+#### US4: Property Management (8 SP)
 
 **Implementation:**
 - Created Property entity with owner relationship
@@ -818,45 +640,12 @@ Response: 200 OK (agent or admin)
 - Property DTOs for request/response
 
 **Endpoints Delivered:**
-```http
-POST /api/properties
-Authorization: Bearer <agent-jwt>
-@PreAuthorize("hasAnyRole('AGENT', 'ADMIN')")
-Request: {
-  "title": "Beautiful House",
-  "description": "3 bedroom, 2 bath",
-  "price": 250000.00
-}
-Response: 201 Created
+- `POST /api/properties` - Create property (AGENT/ADMIN only)
+- `GET /api/properties` - List all properties (public access)
+- `PUT /api/properties/{id}` - Update property (owner validation)
+- `GET /api/properties/my-properties` - View user's properties
 
-GET /api/properties
-(Public access)
-Response: 200 OK [list of all properties]
-
-PUT /api/properties/{id}
-Authorization: Bearer <owner-jwt>
-(Ownership validated in service)
-Response: 200 OK or 403 Forbidden
-
-GET /api/properties/my-properties
-Authorization: Bearer <agent-jwt>
-Response: 200 OK [user's properties]
-```
-
-**Ownership Validation Logic:**
-```java
-public PropertyResponse updateProperty(Long id, PropertyRequest request, String email) {
-    Property property = findById(id);
-    
-    // Validate ownership
-    if (!property.getOwner().getEmail().equals(email)) {
-        throw new AccessDeniedException("You can only update your own properties");
-    }
-    
-    // Update logic...
-}
-```
-
+**Key Feature:** Ownership validation implemented in service layer prevents unauthorized updates.
 **Files Created:**
 - [Property.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/Property.java)
 - [PropertyRepository.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/repository/PropertyRepository.java)
@@ -869,7 +658,7 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 - 8 integration tests written
 - Tests cover create, read, update, ownership validation
 
-#### ✅ US5: Monitoring & Logging (2 SP)
+#### US5: Monitoring & Logging (2 SP)
 
 **Implementation:**
 - Spring Boot Actuator enabled
@@ -879,52 +668,14 @@ public PropertyResponse updateProperty(Long id, PropertyRequest request, String 
 - Request/response logging
 
 **Monitoring Endpoints:**
-```http
-GET /actuator/health
-Response: {
-  "status": "UP"
-}
-
-GET /actuator/info
-Response: {
-  "app": "Property Management API",
-  "version": "1.0.0"
-}
-```
+- `GET /actuator/health` - Returns application health status
+- `GET /actuator/info` - Returns application metadata
 
 **Logging Implementation:**
-```java
-@Slf4j
-@RestController
-public class PropertyController {
-    
-    @PostMapping
-    public ResponseEntity<PropertyResponse> createProperty(...) {
-        log.info("Creating property: title={}, owner={}", 
-                 request.getTitle(), authentication.getName());
-        // Implementation...
-        log.info("Property created successfully: id={}", property.getId());
-    }
-}
-```
-
-**Configuration:**
-```yaml
-# application.yml
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
-  endpoint:
-    health:
-      show-details: when-authorized
-
-logging:
-  level:
-    org.amalitech: INFO
-    org.springframework.web: INFO
-```
+- SLF4J with @Slf4j annotation on all controllers
+- Structured logging for property creation, updates, authentication events
+- Configurable log levels in application.yml (INFO level for production)
+- Global exception handler logs all errors with stack traces
 
 ---
 
@@ -937,24 +688,15 @@ logging:
 - `feature/property-management` - Property management (merged to dev)
 
 **Sprint 2 Commit History:**
-1. `chore: add PR checklist template` ← Improvement #2
-2. `test: add RBAC integration tests (TDD approach)` ← TDD applied
-3. `feat: enable method-level security and implement role-based endpoint restrictions`
-4. `fix: add AccessDeniedException handler for RBAC`
-5. `feat: create Property entity and repository` ← Better breakdown
-6. `feat: implement property service and controller with ownership validation`
-7. `test: add property management integration tests`
-8. `docs: add comprehensive project summary and final deliverables`
-9. `docs: add comprehensive project README with complete documentation`
-10. `docs: add Sprint 2 review and retrospective`
+Executed 10 commits following conventional format, covering RBAC implementation, property management, TDD tests, and documentation updates.
 
 **Total Commits (Both Sprints):** 33+ commits
 
 **Commit Quality:**
-- ✅ Conventional format maintained (100%)
-- ✅ Incremental progress visible
-- ✅ Clear feature isolation
-- ✅ Professional merge strategy
+- Conventional format maintained (100%)
+- Incremental progress visible
+- Clear feature isolation
+- Professional merge strategy
 
 ---
 
@@ -962,30 +704,15 @@ logging:
 
 #### Health Check Endpoint
 
-```bash
-$ curl http://localhost:8080/actuator/health
-{
-  "status": "UP"
-}
-```
+GET `/actuator/health` returns JSON with `{"status": "UP"}`.
 
 #### Application Logs
 
-```
-2026-02-17 14:30:15.123  INFO 12345 --- [main] o.a.p.PropertyManagementApiApplication   : Starting PropertyManagementApiApplication
-2026-02-17 14:30:18.456  INFO 12345 --- [main] o.a.p.PropertyManagementApiApplication   : Started PropertyManagementApiApplication in 3.456 seconds
-2026-02-17 14:31:22.789  INFO 12345 --- [http-nio-8080-exec-1] o.a.p.controller.AuthController          : User registration attempt: email=agent@example.com
-2026-02-17 14:31:22.890  INFO 12345 --- [http-nio-8080-exec-1] o.a.p.service.UserService                : User registered successfully: agent@example.com
-2026-02-17 14:32:15.123  INFO 12345 --- [http-nio-8080-exec-2] o.a.p.controller.PropertyController      : Creating property: title=Beach House, owner=agent@example.com
-2026-02-17 14:32:15.234  INFO 12345 --- [http-nio-8080-exec-2] o.a.p.service.PropertyService            : Property created successfully: id=1
-```
+Structured INFO logs capture application startup, user registration, property operations. Example: "User registered successfully: agent@example.com" and "Property created successfully: id=1".
 
 #### Error Logging
 
-```
-2026-02-17 14:35:45.678  WARN 12345 --- [http-nio-8080-exec-5] o.a.p.exception.GlobalExceptionHandler   : Duplicate email registration attempt: agent@example.com
-2026-02-17 14:36:20.123  WARN 12345 --- [http-nio-8080-exec-7] o.a.p.exception.GlobalExceptionHandler   : Unauthorized property update attempt: propertyId=1, user=other@example.com
-```
+WARN logs capture business rule violations including duplicate email registration attempts and unauthorized property update attempts with relevant context (email, propertyId).
 
 #### Monitoring Configuration Files
 
@@ -999,17 +726,17 @@ $ curl http://localhost:8080/actuator/health
 **Document:** [docs/sprint-2-review.md](docs/sprint-2-review.md)
 
 #### Sprint Goal Achievement
-✅ **Sprint Goal:** "Implement role-based access control and property management features with improved development practices"  
-✅ **Status:** ACHIEVED (100% of stories delivered)
+**Sprint Goal:** "Implement role-based access control and property management features with improved development practices"
+**Status:** ACHIEVED (100% of stories delivered)
 
 #### Delivered Features Summary
 
 | User Story | Story Points | Status | Tests | Improvement Applied |
 |------------|--------------|--------|-------|---------------------|
-| US3: RBAC | 5 SP | ✅ Complete | 6/6 ✅ | TDD ✅ |
-| US4: Property Management | 8 SP | ✅ Complete | 8 tests | Better breakdown ✅ |
-| US5: Monitoring | 2 SP | ✅ Complete | N/A | - |
-| **Total** | **13 SP** | **✅ 100%** | **14 new tests** | **All improvements applied** |
+| US3: RBAC | 5 SP | Complete | 6/6 | TDD |
+| US4: Property Management | 8 SP | Complete | 8 tests | Better breakdown |
+| US5: Monitoring | 2 SP | Complete | N/A | - |
+| **Total** | **13 SP** | **100%** | **14 new tests** | **All improvements applied** |
 
 #### Cumulative API Endpoints
 
@@ -1038,43 +765,13 @@ $ curl http://localhost:8080/actuator/health
 | Unit Tests | 10 | 0 | 10 |
 | Integration Tests | 16 | 14 | 30+ |
 | **Total** | **26** | **14** | **40+** |
-| **Passing** | **26/26 ✅** | **7/7 ✅** | **33/33 ✅** |
+| **Passing** | **26/26** | **7/7** | **33/33** |
 
 #### Sprint 2 Demo
 
-**RBAC Demo:**
-```bash
-# Admin accessing admin endpoint ✅
-$ curl -H "Authorization: Bearer <admin-token>" \
-  http://localhost:8080/api/admin/stats
-→ 200 OK
+**RBAC Demo:** Admin successfully accessed `/api/admin/stats` with admin token (200 OK). Agent blocked from accessing same endpoint (403 Forbidden), demonstrating proper role-based access control.
 
-# Agent accessing admin endpoint ❌
-$ curl -H "Authorization: Bearer <agent-token>" \
-  http://localhost:8080/api/admin/stats
-→ 403 Forbidden
-```
-
-**Property Management Demo:**
-```bash
-# Agent creates property ✅
-$ curl -X POST -H "Authorization: Bearer <agent-token>" \
-  -d '{"title":"Beach House","description":"Ocean view","price":500000}' \
-  http://localhost:8080/api/properties
-→ 201 Created
-
-# Owner updates property ✅
-$ curl -X PUT -H "Authorization: Bearer <agent-token>" \
-  -d '{"title":"Beach House - Updated","price":550000}' \
-  http://localhost:8080/api/properties/1
-→ 200 OK
-
-# Non-owner tries to update ❌
-$ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
-  -d '{"title":"Stolen","price":100}' \
-  http://localhost:8080/api/properties/1
-→ 403 Forbidden (ownership validation)
-```
+**Property Management Demo:** Agent created property via POST endpoint (201 Created). Owner successfully updated own property (200 OK). Non-owner blocked from updating another user's property (403 Forbidden), demonstrating ownership validation.
 
 **Full Sprint 2 Review:** [docs/sprint-2-review.md](docs/sprint-2-review.md)
 
@@ -1084,50 +781,50 @@ $ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 **Document:** [docs/sprint-2-retrospective.md](docs/sprint-2-retrospective.md)
 
-#### What Went Well ✅
+#### What Went Well
 
-1. **Test-Driven Development (TDD) - MVP of Sprint 2** 🏆
+1. **Test-Driven Development (TDD) - MVP of Sprint 2**
    - Applied TDD to RBAC feature
    - All 6 tests written BEFORE implementation
    - Zero bugs in final implementation
    - **Impact:** Game-changer for quality
    - **Recommendation:** Make TDD the default for Sprint 3
 
-2. **All Sprint 1 Improvements Applied** ✨
-   - ✅ TDD for security features (RBAC)
-   - ✅ PR checklist template created
-   - ✅ Better task breakdown (Property feature)
+2. **All Sprint 1 Improvements Applied**
+   - TDD for security features (RBAC)
+   - PR checklist template created
+   - Better task breakdown (Property feature)
    - **Impact:** Demonstrates continuous improvement
    - **Recommendation:** Continue retrospective-driven improvements
 
-3. **Comprehensive Documentation** 📚
+3. **Comprehensive Documentation**
    - 4,200+ lines of documentation created
    - README, DELIVERABLES, project summary
    - Sprint reviews and retrospectives
    - **Impact:** Professional deliverable quality
    - **Recommendation:** Maintain documentation standards
 
-#### What Could Be Improved 🔧
+#### What Could Be Improved
 
-1. **Test Data Management** ⚠️
+1. **Test Data Management**
    - **Issue:** Property tests causing some failures
    - **Root Cause:** Test data isolation issues
    - **Solution:** Implement @Transactional on test classes
    - **Priority:** High for Sprint 3
 
-2. **Earlier Integration** 🔄
+2. **Earlier Integration**
    - **Issue:** Features developed entirely on feature branches
    - **Impact:** Late integration discovery
    - **Solution:** Merge to dev more frequently (daily if possible)
    - **Priority:** Medium for Sprint 3
 
-3. **API Documentation** 📡
+3. **API Documentation**
    - **Issue:** No interactive API docs (Swagger/OpenAPI)
    - **Impact:** Manual testing time-consuming
    - **Solution:** Add SpringDoc OpenAPI
    - **Priority:** Medium for Sprint 3
 
-#### Key Learnings 🎓
+#### Key Learnings
 
 **Technical Learnings:**
 1. TDD is worth the investment - catches issues upfront
@@ -1145,18 +842,18 @@ $ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 
 | Priority | Action Item | Owner | Target |
 |----------|-------------|-------|--------|
-| 🔴 High | Implement @Transactional on test classes | Dev Team | Sprint 3 Day 1 |
-| 🟡 Medium | Add SpringDoc OpenAPI documentation | Dev Team | Sprint 3 Week 1 |
-| 🟡 Medium | Establish daily merge to dev policy | Dev Team | Sprint 3 Ongoing |
-| 🟢 Low | Add custom metrics (Prometheus/Micrometer) | Dev Team | Sprint 3 Story |
+| High | Implement @Transactional on test classes | Dev Team | Sprint 3 Day 1 |
+| Medium | Add SpringDoc OpenAPI documentation | Dev Team | Sprint 3 Week 1 |
+| Medium | Establish daily merge to dev policy | Dev Team | Sprint 3 Ongoing |
+| Low | Add custom metrics (Prometheus/Micrometer) | Dev Team | Sprint 3 Story |
 
 **Full Sprint 2 Retrospective:** [docs/sprint-2-retrospective.md](docs/sprint-2-retrospective.md)
 
 ---
 
-## 📦 Final Deliverables Index
+## Final Deliverables Index
 
-### 1. Backlog & Sprint Plans ✅
+### 1. Backlog & Sprint Plans
 
 | Document | Description | Location |
 |----------|-------------|----------|
@@ -1166,37 +863,23 @@ $ curl -X PUT -H "Authorization: Bearer <other-agent-token>" \
 | Sprint 2 Plan | Sprint 2 goals and user stories | [2-Sprint-2-Plan.md](2-Sprint-2-Plan.md) |
 
 **User Stories Delivered:**
-- ✅ US1: User Registration (5 SP) - Sprint 1
-- ✅ US2: JWT Authentication (8 SP) - Sprint 1
-- ✅ US3: Role-Based Access Control (5 SP) - Sprint 2
-- ✅ US4: Property Management (8 SP) - Sprint 2
-- ✅ US5: Monitoring & Logging (2 SP) - Sprint 2
+- US1: User Registration (5 SP) - Sprint 1
+- US2: JWT Authentication (8 SP) - Sprint 1
+- US3: Role-Based Access Control (5 SP) - Sprint 2
+- US4: Property Management (8 SP) - Sprint 2
+- US5: Monitoring & Logging (2 SP) - Sprint 2
 
 **Total Story Points:** 31 SP (100% delivered)
 
 ---
 
-### 2. Codebase ✅
+### 2. Codebase
 
 **Repository:** https://github.com/bograh/Agile-and-Devops-in-Practice
 
-**Branch Structure:**
-```
-main (production - Sprint 1 release)
-  ↑
-dev (integration - Sprint 2 complete)
-  ↑              ↑              ↑              ↑
-feature/user-reg  feature/jwt  feature/rbac  feature/property
-```
+**Branch Structure:** Linear flow from feature branches → dev → main using merge --no-ff strategy.
 
-**All Branches Published:**
-- ✅ `main` - Production (Sprint 1)  
-- ✅ `dev` - Integration (Sprint 2)  
-- ✅ `feature/user-registration` - User registration feature  
-- ✅ `feature/jwt-authentication` - JWT authentication feature  
-- ✅ `feature/ci-pipeline` - CI/CD setup  
-- ✅ `feature/rbac` - Role-based access control  
-- ✅ `feature/property-management` - Property management  
+**All Branches Published:** 7 branches total including main, dev, and 5 feature branches (user-registration, jwt-authentication, ci-pipeline, rbac, property-management).
 
 **Commit Statistics:**
 - **Total Commits:** 33+ commits
@@ -1204,52 +887,34 @@ feature/user-reg  feature/jwt  feature/rbac  feature/property
 - **Feature Branches:** 5 branches
 - **Merge Commits:** 6 merges with --no-ff
 
-**Code Structure:**
-```
-Property-Management-API/
-├── src/main/java/
-│   ├── config/         (1 file)  - Security configuration
-│   ├── controller/     (5 files) - REST API endpoints
-│   ├── dto/            (5 files) - Request/Response DTOs
-│   ├── exception/      (3 files) - Error handling
-│   ├── model/          (3 files) - JPA entities
-│   ├── repository/     (2 files) - Data access
-│   ├── security/       (3 files) - JWT & auth
-│   └── service/        (3 files) - Business logic
-├── src/test/java/      (6 files) - Test classes
-└── src/main/resources/ (1 file)  - Configuration
-```
+**Code Structure:** 25 Java files organized across 8 packages: config (1 file), controller (5), dto (5), exception (3), model (3), repository (2), security (3), service (3), plus 6 test classes and configuration files.
 
 **Total Java Files:** 25 files  
 **Lines of Code:** 5,000+
 
 ---
 
-### 3. CI/CD Evidence ✅
+### 3. CI/CD Evidence
 
 #### Pipeline Configuration
 **File:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
 
 **Pipeline Features:**
-- ✅ Automated build on push/PR
-- ✅ Maven compile, test, package
-- ✅ Docker image build
-- ✅ Test results upload
-- ✅ Runs on Ubuntu latest with JDK 21
+- Automated build on push/PR
+- Maven compile, test, package
+- Docker image build
+- Test results upload
+- Runs on Ubuntu latest with JDK 21
 
 #### Pipeline Execution Screenshots
 
-1. **Successful Pipeline Run**
-   - File: [screenshots/pipeline-screenshot.png](screenshots/pipeline-screenshot.png)
-   - Shows: Build ✅, Test ✅, Package ✅, Docker Build ✅
+![Successful Pipeline Run](screenshots/pipeline-screenshot.png)
+*Figure 7: Successful pipeline execution showing Build, Test, Package, Docker Build stages*
 
-2. **Pipeline on Merge Requests**
-   - File: [screenshots/ci-pipeline-on-merge-requests.png](screenshots/ci-pipeline-on-merge-requests.png)
-   - Shows: PR validation workflow
+![Pipeline on Merge Requests](screenshots/ci-pipeline-on-merge-requests.png)
+*Figure 8: PR validation workflow demonstrating automated checks on merge requests*
 
-3. **Failed Pipeline (Example)**
-   - Demonstrates: Pipeline catches test failures
-   - Result: PR blocked until tests pass
+**Failed Pipeline Handling:** Pipeline catches test failures and blocks PRs until tests pass (95%+ success rate over 20+ executions).
 
 #### Pipeline Metrics
 - **Total Runs:** 20+ executions
@@ -1257,52 +922,15 @@ Property-Management-API/
 - **Average Duration:** 2-3 minutes
 - **Triggers:** Both push and PR events
 
-#### Docker Configuration
-**File:** [Property-Management-API/Dockerfile](Property-Management-API/Dockerfile)
-
-**Build Evidence:**
-```bash
-$ docker build -t property-api:latest Property-Management-API
-[+] Building 45.2s (15/15) FINISHED
-Successfully built 7f8a9b2c3d4e
-Successfully tagged property-api:latest
-
-$ docker images | grep property-api
-property-api    latest    7f8a9b2c3d4e    250MB
-```
-
-**Docker Features:**
-- ✅ Multi-stage build (Maven + JRE)
-- ✅ Alpine-based (minimal size)
-- ✅ Health check included
-- ✅ Port 8080 exposed
+**Build Evidence:** Docker multi-stage build completed successfully in 45.2s, producing Alpine-based image (250MB) with health check and port 8080 exposed.
 
 ---
 
-### 4. Testing Evidence ✅
+### 4. Testing Evidence
 
-#### Test Files
+#### Test Execution
 
-**Unit Tests:**
-1. [UserServiceTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/service/UserServiceTest.java) - 4 tests
-2. [JwtTokenProviderTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/security/JwtTokenProviderTest.java) - 6 tests
-
-**Integration Tests:**
-1. [AuthControllerIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/controller/AuthControllerIntegrationTest.java) - 5 tests
-2. [AuthenticationIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/AuthenticationIntegrationTest.java) - 5 tests
-3. [RBACIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java) - 6 tests
-4. [PropertyManagementIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/PropertyManagementIntegrationTest.java) - 8 tests
-
-#### Test Execution Screenshot
-**File:** [screenshots/tests-screenshot.png](screenshots/tests-screenshot.png)
-
-**Maven Test Output:**
-```
-Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] BUILD SUCCESS
-[INFO] Total time: 18.456 s
-```
+**Maven Test Output:** 33 tests run, 0 failures, 0 errors, 0 skipped. BUILD SUCCESS in 18.456s.
 
 #### Test Coverage
 - **Unit Tests:** 10 tests
@@ -1315,20 +943,20 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 
 | Category | Tests | Pass Rate | Coverage |
 |----------|-------|-----------|----------|
-| Authentication | 9 tests | 100% ✅ | 90% |
-| Authorization (RBAC) | 6 tests | 100% ✅ | 85% |
-| Security (JWT) | 6 tests | 100% ✅ | 80% |
-| Property Management | 8 tests | 100% ✅ | 75% |
-| User Service | 4 tests | 100% ✅ | 90% |
+| Authentication | 9 tests | 100% | 90% |
+| Authorization (RBAC) | 6 tests | 100% | 85% |
+| Security (JWT) | 6 tests | 100% | 80% |
+| Property Management | 8 tests | 100% | 75% |
+| User Service | 4 tests | 100% | 90% |
 
 **CI Integration:**
-- ✅ Tests run automatically in pipeline
-- ✅ PR blocked if tests fail
-- ✅ Test results uploaded as artifacts
+- Tests run automatically in pipeline
+- PR blocked if tests fail
+- Test results uploaded as artifacts
 
 ---
 
-### 5. Sprint Review Documents ✅
+### 5. Sprint Review Documents
 
 #### Sprint 1 Review
 **Document:** [docs/sprint-1-review.md](docs/sprint-1-review.md) (7.6 KB)
@@ -1357,7 +985,7 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 
 ---
 
-### 6. Retrospective Documents ✅
+### 6. Retrospective Documents
 
 #### Sprint 1 Retrospective
 **Document:** [docs/sprint-1-retrospective.md](docs/sprint-1-retrospective.md) (8.8 KB)
@@ -1366,9 +994,9 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 - What went well (4 items)
 - What could be improved (3 items)
 - Action items for Sprint 2:
-  1. ✅ Apply TDD for security features
-  2. ✅ Create PR checklist template
-  3. ✅ Better task breakdown
+  1. Apply TDD for security features
+  2. Create PR checklist template
+  3. Better task breakdown
 - Team health assessment
 
 #### Sprint 2 Final Retrospective
@@ -1378,16 +1006,16 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 - What went well (5 items, TDD highlighted)
 - What could be improved (5 items)
 - Sprint 1 improvements verification:
-  - ✅ TDD applied successfully (RBAC)
-  - ✅ PR template created
-  - ✅ Task breakdown improved
+  - TDD applied successfully (RBAC)
+  - PR template created
+  - Task breakdown improved
 - Action items for Sprint 3 (future)
 - Key learnings (technical + process)
 - Team shoutouts and celebration
 
 ---
 
-### 7. Additional Documentation ✅
+### 7. Additional Documentation
 
 #### Main Documentation
 
@@ -1431,7 +1059,7 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 
 ---
 
-## 📈 Key Achievements & Metrics
+## Key Achievements & Metrics
 
 ### Sprint Performance
 
@@ -1461,31 +1089,31 @@ Tests run: 33, Failures: 0, Errors: 0, Skipped: 0
 
 | Category | Count | Status |
 |----------|-------|--------|
-| Authentication | 2 endpoints | ✅ Complete |
-| Authorization | 3 endpoints | ✅ Complete |
-| Property Management | 5 endpoints | ✅ Complete |
-| Monitoring | 2 endpoints | ✅ Complete |
+| Authentication | 2 endpoints | Complete |
+| Authorization | 3 endpoints | Complete |
+| Property Management | 5 endpoints | Complete |
+| Monitoring | 2 endpoints | Complete |
 
 ### Process Improvements
 
 **Sprint 1 → Sprint 2:**
-- ✅ TDD adopted (RBAC feature)
-- ✅ PR template created and ready for use
-- ✅ Task breakdown improved
-- ✅ **Impact:** Zero bugs in TDD features
+- TDD adopted (RBAC feature)
+- PR template created and ready for use
+- Task breakdown improved
+- **Impact:** Zero bugs in TDD features
 
 ### Quality Achievements
 
-✅ **Security:** JWT authentication + RBAC + ownership validation  
-✅ **Architecture:** Clean architecture with service layer  
-✅ **Testing:** Comprehensive unit + integration tests  
-✅ **DevOps:** Automated CI/CD pipeline  
-✅ **Documentation:** Professional-grade documentation  
-✅ **Git Workflow:** Feature branches + conventional commits  
+**Security:** JWT authentication + RBAC + ownership validation
+**Architecture:** Clean architecture with service layer
+**Testing:** Comprehensive unit + integration tests
+**DevOps:** Automated CI/CD pipeline
+**Documentation:** Professional-grade documentation
+**Git Workflow:** Feature branches + conventional commits
 
 ---
 
-## 🎓 Conclusion
+## Conclusion
 
 ### Project Success
 
@@ -1493,21 +1121,21 @@ This project successfully demonstrates the complete application of Agile princip
 
 ### Agile Principles Applied
 
-✅ **Iterative Development:** Two successful sprints with incremental delivery  
-✅ **Sprint Planning:** Detailed backlog refinement and estimation  
-✅ **Sprint Reviews:** Comprehensive demonstrations and stakeholder feedback  
-✅ **Sprint Retrospectives:** Actionable improvements identified and applied  
-✅ **Continuous Improvement:** Process enhancements from Sprint 1 applied in Sprint 2  
-✅ **Definition of Done:** Consistent quality standards maintained  
+**Iterative Development:** Two successful sprints with incremental delivery
+**Sprint Planning:** Detailed backlog refinement and estimation
+**Sprint Reviews:** Comprehensive demonstrations and stakeholder feedback
+**Sprint Retrospectives:** Actionable improvements identified and applied
+**Continuous Improvement:** Process enhancements from Sprint 1 applied in Sprint 2
+**Definition of Done:** Consistent quality standards maintained
 
 ### DevOps Practices Applied
 
-✅ **Version Control:** Professional Git workflow with feature branches  
-✅ **Continuous Integration:** Automated build and test pipeline  
-✅ **Automated Testing:** Comprehensive test suite (41+ tests)  
-✅ **Containerization:** Docker multi-stage build  
-✅ **Infrastructure as Code:** Pipeline configuration and Dockerfile  
-✅ **Monitoring:** Health checks and structured logging  
+**Version Control:** Professional Git workflow with feature branches
+**Continuous Integration:** Automated build and test pipeline
+**Automated Testing:** Comprehensive test suite (41+ tests)
+**Containerization:** Docker multi-stage build
+**Infrastructure as Code:** Pipeline configuration and Dockerfile
+**Monitoring:** Health checks and structured logging
 
 ### Key Learnings
 
@@ -1520,13 +1148,13 @@ This project successfully demonstrates the complete application of Agile princip
 ### Professional Standards Demonstrated
 
 This project demonstrates enterprise-grade software development:
-- ✅ Security best practices (JWT, BCrypt, RBAC)
-- ✅ Clean code architecture
-- ✅ Comprehensive testing strategy
-- ✅ Professional Git workflow
-- ✅ Automated CI/CD pipeline
-- ✅ Complete documentation
-- ✅ Process improvement mindset
+- Security best practices (JWT, BCrypt, RBAC)
+- Clean code architecture
+- Comprehensive testing strategy
+- Professional Git workflow
+- Automated CI/CD pipeline
+- Complete documentation
+- Process improvement mindset
 
 ### Final Metrics Summary
 
@@ -1539,51 +1167,28 @@ This project demonstrates enterprise-grade software development:
 
 ### Submission Completeness
 
-✅ All required deliverables included and linked  
-✅ Complete commit history demonstrating incremental development  
-✅ CI/CD pipeline configured and evidenced  
-✅ Comprehensive test coverage demonstrated  
-✅ Sprint reviews documenting delivered features  
-✅ Retrospectives showing continuous improvement  
+All required deliverables included and linked
+Complete commit history demonstrating incremental development
+CI/CD pipeline configured and evidenced
+Comprehensive test coverage demonstrated
+Sprint reviews documenting delivered features
+Retrospectives showing continuous improvement
 
 ---
 
-## 📂 Quick Access Links
-
-### Planning Documents
-- [Product Backlog](0-Sprint-Plan.md)
-- [Sprint 1 Plan](1-Sprint-1-Plan.md)
-- [Sprint 2 Plan](2-Sprint-2-Plan.md)
-
-### Code Repository
+## Code Repository
 - [GitHub Repository](https://github.com/bograh/Agile-and-Devops-in-Practice)
 - [Main Branch](https://github.com/bograh/Agile-and-Devops-in-Practice/tree/main)
 - [Dev Branch](https://github.com/bograh/Agile-and-Devops-in-Practice/tree/dev)
 
-### Sprint Documentation
-- [Sprint 1 Review](docs/sprint-1-review.md)
-- [Sprint 1 Retrospective](docs/sprint-1-retrospective.md)
-- [Sprint 2 Review](docs/sprint-2-review.md)
-- [Sprint 2 Retrospective](docs/sprint-2-retrospective.md)
-
-### Technical Documentation
-- [README - Getting Started](README.md)
-- [Project Summary](docs/project-summary.md)
-- [Complete Deliverables](DELIVERABLES.md)
-
-### CI/CD Evidence
-- [Pipeline Configuration](.github/workflows/ci.yml)
-- [Pipeline Screenshot](screenshots/pipeline-screenshot.png)
-- [PR Pipeline Screenshot](screenshots/ci-pipeline-on-merge-requests.png)
-- [Test Screenshot](screenshots/tests-screenshot.png)
-
 ---
 
-**Submitted by:** [Your Name]  
-**Course:** Agile and DevOps in Practice  
-**Date:** February 17, 2026  
-**Status:** ✅ Complete and Ready for Evaluation
+**Submitted by:** Bernard Ograh
+
+**Course:** Agile and DevOps in Practice
+
+**Date:** February 17, 2026
+
+**Status:** Complete and Ready for Evaluation
 
 ---
-
-*This submission represents a complete demonstration of Agile and DevOps practices applied to real-world software development. All deliverables are production-ready and follow industry best practices.*
