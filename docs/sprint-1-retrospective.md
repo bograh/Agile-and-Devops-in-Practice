@@ -1,25 +1,25 @@
 # Sprint 1 Retrospective
 
-**Sprint Duration:** 1 Week  
-**Date:** February 17, 2026  
+**Sprint Duration:** 1 Week
+**Date:** February 17, 2026
 **Participants:** Development Team
 
 ---
 
-## 🎯 Sprint Summary
+## Sprint Summary
 
-**Planned Capacity:** 13 Story Points  
-**Delivered:** 18 Story Points  
+**Planned Capacity:** 13 Story Points
+**Delivered:** 18 Story Points
 **Velocity:** 18 SP (138% of planned)
 
 **Features Completed:**
-- ✅ US1 – User Registration (5 SP)
-- ✅ US2 – JWT Authentication (8 SP)
-- ✅ CI/CD Pipeline (5 SP)
+- US1 – User Registration (5 SP)
+- US2 – JWT Authentication (8 SP)
+- CI/CD Pipeline (5 SP)
 
 ---
 
-## ✅ What Went Well
+## What Went Well
 
 ### 1. **Clear Story Breakdown and Planning**
 - Breaking user stories into specific technical tasks helped maintain focus
@@ -63,7 +63,7 @@ fix: update test expectations for authentication status codes
 
 ---
 
-## ⚠️ What Didn't Go Well
+## What Didn't Go Well
 
 ### 1. **JWT Filter Order Debugging Took Too Long**
 **Issue:** Spent significant time understanding Spring Security filter chain order
@@ -106,7 +106,7 @@ fix: update test expectations for authentication status codes
 
 ---
 
-## 🚀 Improvements for Sprint 2
+## Improvements for Sprint 2
 
 ### Process Improvements
 
@@ -116,7 +116,7 @@ fix: update test expectations for authentication status codes
 **Test Cases to Write First:**
 ```
 - /admin/** → 403 if USER
-- /admin/** → 403 if AGENT  
+- /admin/** → 403 if AGENT
 - /admin/** → 200 if ADMIN
 - /agent/** → 403 if USER
 - /agent/** → 200 if AGENT
@@ -213,12 +213,12 @@ docker build -t test .
 
 ---
 
-## 📊 Metrics & Observations
+## Metrics & Observations
 
 ### Velocity Analysis
-**Estimated:** 12 SP/sprint  
-**Actual:** 18 SP delivered  
-**Reason for difference:** 
+**Estimated:** 12 SP/sprint
+**Actual:** 18 SP delivered
+**Reason for difference:**
 - Underestimated velocity in first sprint
 - Strong technical foundation helped move faster
 - No blockers encountered
@@ -245,16 +245,16 @@ docker build -t test .
 ---
 
 ### Commit Frequency
-**Total Commits:** 12  
-**Average per Feature:** 4 commits  
-**Smallest Commit:** Configuration change  
+**Total Commits:** 12
+**Average per Feature:** 4 commits
+**Smallest Commit:** Configuration change
 **Largest Commit:** Test additions (229 lines)
 
 **Observation:** Good commit granularity, but some test commits could be split
 
 ---
 
-## 🎯 Sprint 2 Action Items
+## Sprint 2 Action Items
 
 | # | Action Item | Owner | Priority | Expected Impact |
 |---|-------------|-------|----------|-----------------|
@@ -266,7 +266,7 @@ docker build -t test .
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 
 ### What Made Us Successful
 1. **Strong foundation** - Good architecture decisions paid off
@@ -287,24 +287,24 @@ docker build -t test .
 
 ---
 
-## 📈 Continuous Improvement
+## Continuous Improvement
 
 **Sprint 1 Grade:** A-
 
 **Strengths:**
-- ✅ Delivered all planned features
-- ✅ Exceeded velocity expectations
-- ✅ High test coverage
-- ✅ Production-ready CI/CD
+- Delivered all planned features
+- Exceeded velocity expectations
+- High test coverage
+- Production-ready CI/CD
 
 **Areas for Improvement:**
-- ⚠️ Better security architecture understanding
-- ⚠️ Earlier test writing for complex features
-- ⚠️ More detailed upfront planning
+- Better security architecture understanding
+- Earlier test writing for complex features
+- More detailed upfront planning
 
 ---
 
-## 🔮 Sprint 2 Preparation
+## Sprint 2 Preparation
 
 With these improvements in place, Sprint 2 should see:
 - **Faster RBAC implementation** (thanks to TDD approach)
@@ -312,10 +312,10 @@ With these improvements in place, Sprint 2 should see:
 - **Fewer review cycles** (thanks to PR template)
 - **Higher confidence** (thanks to security documentation)
 
-**Team Commitment:**  
+**Team Commitment:**
 Apply all identified improvements in Sprint 2 to maintain high velocity while improving quality and reducing debugging time.
 
 ---
 
-**Sprint 1 Retrospective Complete** ✅  
+**Sprint 1 Retrospective Complete**
 **Next Sprint:** Sprint 2 - RBAC & Property Management
