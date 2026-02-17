@@ -73,7 +73,7 @@ A production-ready API demonstrating enterprise-grade security, clean architectu
 
 ### 2. Complete Product Backlog
 
-**Document:** [0-Sprint-Plan.md](0-Sprint-Plan.md)
+**Document:** [0-Sprint-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/0-Sprint-Plan.md)
 
 #### User Stories with Estimates
 
@@ -108,7 +108,7 @@ Priority: High
 Sprint: 1
 ```
 
-**Full backlog available at:** [0-Sprint-Plan.md](0-Sprint-Plan.md)
+**Full backlog available at:** [0-Sprint-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/0-Sprint-Plan.md)
 
 ---
 
@@ -168,7 +168,7 @@ Our team's Definition of Done ensures quality and completeness:
 - [ ] No critical security vulnerabilities
 - [ ] Health check endpoint responds
 
-**Full DoD available at:** [0-Sprint-Plan.md](0-Sprint-Plan.md#definition-of-done)
+**Full DoD available at:** [0-Sprint-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/0-Sprint-Plan.md#definition-of-done)
 
 ---
 
@@ -185,7 +185,7 @@ Our team's Definition of Done ensures quality and completeness:
 
 **Total Commitment:** 18 Story Points
 
-**Sprint Plan Document:** [1-Sprint-1-Plan.md](1-Sprint-1-Plan.md)
+**Sprint Plan Document:** [1-Sprint-1-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/1-Sprint-1-Plan.md)
 
 ---
 
@@ -210,12 +210,12 @@ Our team's Definition of Done ensures quality and completeness:
 - Returns 201 with user details on success
 
 **Files Created:**
-- [User.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/User.java)
-- [Role.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/Role.java)
-- [UserRepository.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/repository/UserRepository.java)
-- [UserService.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/service/UserService.java)
-- [AuthController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AuthController.java)
-- [GlobalExceptionHandler.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/exception/GlobalExceptionHandler.java)
+- [User.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/User.java)
+- [Role.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/Role.java)
+- [UserRepository.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/repository/UserRepository.java)
+- [UserService.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/service/UserService.java)
+- [AuthController.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AuthController.java)
+- [GlobalExceptionHandler.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/exception/GlobalExceptionHandler.java)
 
 **Test Coverage:**
 - 4 unit tests in `UserServiceTest.java`
@@ -237,11 +237,11 @@ Our team's Definition of Done ensures quality and completeness:
 - `GET /api/test/secure` - Protected endpoint requiring JWT authorization
 
 **Files Created:**
-- [JwtTokenProvider.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/JwtTokenProvider.java)
-- [JwtAuthenticationFilter.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/JwtAuthenticationFilter.java)
-- [CustomUserDetailsService.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/CustomUserDetailsService.java)
-- [SecurityConfig.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/config/SecurityConfig.java)
-- [TestController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/TestController.java)
+- [JwtTokenProvider.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/JwtTokenProvider.java)
+- [JwtAuthenticationFilter.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/JwtAuthenticationFilter.java)
+- [CustomUserDetailsService.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/security/CustomUserDetailsService.java)
+- [SecurityConfig.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/config/SecurityConfig.java)
+- [TestController.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/TestController.java)
 
 **Test Coverage:**
 - 6 unit tests in `JwtTokenProviderTest.java`
@@ -257,7 +257,7 @@ Our team's Definition of Done ensures quality and completeness:
 - Test results uploaded as artifacts
 
 **Pipeline Configuration:**
-- **File:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
+- **File:** [.github/workflows/ci.yml](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/.github/workflows/ci.yml)
 - **Triggers:** Push and PR to main/dev branches
 - **Steps:**
   1. Checkout code
@@ -269,20 +269,20 @@ Our team's Definition of Done ensures quality and completeness:
   7. Upload test results
 
 **Docker Configuration:**
-- **File:** [Dockerfile](Property-Management-API/Dockerfile)
+- **File:** [Dockerfile](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/Dockerfile)
 - Multi-stage build (Maven + JRE)
 - Alpine-based for minimal image size
 - Health check included
 
 **Evidence:**
 
-![Pipeline Success](screenshots/pipeline-screenshot.png)
+![Pipeline Success](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/pipeline-screenshot.png)
 *Figure 1: Pipeline running successfully*
 
-![Test Execution](screenshots/tests-screenshot.png)
+![Test Execution](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/tests-screenshot.png)
 *Figure 2: Tests executing in CI*
 
-![PR Validation](screenshots/ci-pipeline-on-merge-requests.png)
+![PR Validation](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/ci-pipeline-on-merge-requests.png)
 *Figure 3: PR validation workflow*
 
 ---
@@ -336,7 +336,7 @@ Our team's Definition of Done ensures quality and completeness:
 
 #### Pipeline Configuration
 
-**File:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
+**File:** [.github/workflows/ci.yml](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/.github/workflows/ci.yml)
 
 **Pipeline Steps:**
 1. Checkout code
@@ -345,10 +345,10 @@ Our team's Definition of Done ensures quality and completeness:
 4. Run automated tests
 5. Upload test results
 
-![Pipeline Success](screenshots/pipeline-screenshot.png)
+![Pipeline Success](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/pipeline-screenshot.png)
 *Figure 4: Successful pipeline execution showing all stages passing*
 
-![PR Pipeline](screenshots/ci-pipeline-on-merge-requests.png)
+![PR Pipeline](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/ci-pipeline-on-merge-requests.png)
 *Figure 5: Automated pipeline trigger on pull requests*
 
 **Pipeline Metrics:**
@@ -359,7 +359,7 @@ Our team's Definition of Done ensures quality and completeness:
 
 #### Docker Build Evidence
 
-**Dockerfile:** [Property-Management-API/Dockerfile](Property-Management-API/Dockerfile)
+**Dockerfile:** [Property-Management-API/Dockerfile](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/Dockerfile)
 
 **Build Success:**
 - Docker image built successfully
@@ -391,7 +391,7 @@ Our team's Definition of Done ensures quality and completeness:
 
 #### Test Execution Results
 
-![Test Results](screenshots/tests-screenshot.png)
+![Test Results](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/tests-screenshot.png)
 *Figure 6: Complete test suite execution - 26/26 tests passing*
 
 #### Sample Test File
@@ -401,10 +401,10 @@ Our team's Definition of Done ensures quality and completeness:
 **Integration Tests:** AuthenticationIntegrationTest.java uses @SpringBootTest with MockMvc to test end-to-end authentication flow including registration, login, and JWT token verification.
 
 **Test Files:**
-- [UserServiceTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/service/UserServiceTest.java)
-- [JwtTokenProviderTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/security/JwtTokenProviderTest.java)
-- [AuthControllerIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/controller/AuthControllerIntegrationTest.java)
-- [AuthenticationIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/AuthenticationIntegrationTest.java)
+- [UserServiceTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/service/UserServiceTest.java)
+- [JwtTokenProviderTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/security/JwtTokenProviderTest.java)
+- [AuthControllerIntegrationTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/controller/AuthControllerIntegrationTest.java)
+- [AuthenticationIntegrationTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/AuthenticationIntegrationTest.java)
 
 #### Test Coverage
 
@@ -421,7 +421,7 @@ Our team's Definition of Done ensures quality and completeness:
 
 ### 5. Sprint 1 Review
 
-**Document:** [docs/sprint-1-review.md](docs/sprint-1-review.md)
+**Document:** [docs/sprint-1-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-review.md)
 
 #### Sprint Goal Achievement
 **Sprint Goal:** "Establish authentication foundation and CI/CD pipeline"
@@ -463,13 +463,13 @@ Our team's Definition of Done ensures quality and completeness:
 - **Code Quality:** No critical issues
 - **Documentation:** Complete
 
-**Full Sprint 1 Review:** [docs/sprint-1-review.md](docs/sprint-1-review.md)
+**Full Sprint 1 Review:** [docs/sprint-1-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-review.md)
 
 ---
 
 ### 6. Sprint 1 Retrospective
 
-**Document:** [docs/sprint-1-retrospective.md](docs/sprint-1-retrospective.md)
+**Document:** [docs/sprint-1-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-retrospective.md)
 
 #### What Went Well
 
@@ -524,7 +524,7 @@ Our team's Definition of Done ensures quality and completeness:
 | Create PR checklist template | Medium | Dev Team | → Sprint 2 |
 | Improve task breakdown for large stories | Medium | Dev Team | → Sprint 2 |
 
-**Full Sprint 1 Retrospective:** [docs/sprint-1-retrospective.md](docs/sprint-1-retrospective.md)
+**Full Sprint 1 Retrospective:** [docs/sprint-1-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-retrospective.md)
 
 ---
 
@@ -555,7 +555,7 @@ Our team's Definition of Done ensures quality and completeness:
 - Commit: `test: add RBAC integration tests (TDD approach)` came BEFORE
 - Commit: `feat: enable method-level security and implement role-based endpoint restrictions`
 
-**Test File:** [RBACIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
+**Test File:** [RBACIntegrationTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
 
 #### Improvement #2: PR Checklist Template
 
@@ -564,7 +564,7 @@ Our team's Definition of Done ensures quality and completeness:
 **Sprint 2 Action:** Created comprehensive PR template
 
 **Implementation:**
-Created [.github/pull_request_template.md](.github/pull_request_template.md) with:
+Created [.github/pull_request_template.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/.github/pull_request_template.md) with:
 - Code quality checklist
 - Testing requirements
 - Documentation requirements
@@ -617,13 +617,13 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 - Comprehensive RBAC integration tests (TDD approach)
 
 **Endpoints Delivered:**
-- `GET /api/admin/stats` - Admin-only endpoint with `@PreAuthorize("hasRole('ADMIN')")` 
+- `GET /api/admin/stats` - Admin-only endpoint with `@PreAuthorize("hasRole('ADMIN')")`
 - `GET /api/agent/dashboard` - Agent/Admin endpoint with `@PreAuthorize("hasAnyRole('AGENT', 'ADMIN')")`
 
 **Files Created:**
-- [AdminController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AdminController.java)
-- [AgentController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AgentController.java)
-- [RBACIntegrationTest.java](Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
+- [AdminController.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AdminController.java)
+- [AgentController.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/AgentController.java)
+- [RBACIntegrationTest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/test/java/org/amalitech/propertymanagementapi/integration/RBACIntegrationTest.java)
 
 **Test Coverage (TDD):** 6 tests written before implementation covering admin/agent/user role access patterns for both admin-only and agent-accessible endpoints.
 
@@ -647,12 +647,12 @@ Created [.github/pull_request_template.md](.github/pull_request_template.md) wit
 
 **Key Feature:** Ownership validation implemented in service layer prevents unauthorized updates.
 **Files Created:**
-- [Property.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/Property.java)
-- [PropertyRepository.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/repository/PropertyRepository.java)
-- [PropertyService.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/service/PropertyService.java)
-- [PropertyController.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/PropertyController.java)
-- [PropertyRequest.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/dto/PropertyRequest.java)
-- [PropertyResponse.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/dto/PropertyResponse.java)
+- [Property.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/model/Property.java)
+- [PropertyRepository.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/repository/PropertyRepository.java)
+- [PropertyService.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/service/PropertyService.java)
+- [PropertyController.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/controller/PropertyController.java)
+- [PropertyRequest.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/dto/PropertyRequest.java)
+- [PropertyResponse.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/dto/PropertyResponse.java)
 
 **Test Coverage:**
 - 8 integration tests written
@@ -716,14 +716,14 @@ WARN logs capture business rule violations including duplicate email registratio
 
 #### Monitoring Configuration Files
 
-- [application.yml](Property-Management-API/src/main/resources/application.yml) - Actuator configuration
-- [GlobalExceptionHandler.java](Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/exception/GlobalExceptionHandler.java) - Error logging
+- [application.yml](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/resources/application.yml) - Actuator configuration
+- [GlobalExceptionHandler.java](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/Property-Management-API/src/main/java/org/amalitech/propertymanagementapi/exception/GlobalExceptionHandler.java) - Error logging
 
 ---
 
 ### 5. Sprint 2 Review
 
-**Document:** [docs/sprint-2-review.md](docs/sprint-2-review.md)
+**Document:** [docs/sprint-2-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-review.md)
 
 #### Sprint Goal Achievement
 **Sprint Goal:** "Implement role-based access control and property management features with improved development practices"
@@ -773,13 +773,13 @@ WARN logs capture business rule violations including duplicate email registratio
 
 **Property Management Demo:** Agent created property via POST endpoint (201 Created). Owner successfully updated own property (200 OK). Non-owner blocked from updating another user's property (403 Forbidden), demonstrating ownership validation.
 
-**Full Sprint 2 Review:** [docs/sprint-2-review.md](docs/sprint-2-review.md)
+**Full Sprint 2 Review:** [docs/sprint-2-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-review.md)
 
 ---
 
 ### 6. Sprint 2 Final Retrospective
 
-**Document:** [docs/sprint-2-retrospective.md](docs/sprint-2-retrospective.md)
+**Document:** [docs/sprint-2-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-retrospective.md)
 
 #### What Went Well
 
@@ -847,7 +847,7 @@ WARN logs capture business rule violations including duplicate email registratio
 | Medium | Establish daily merge to dev policy | Dev Team | Sprint 3 Ongoing |
 | Low | Add custom metrics (Prometheus/Micrometer) | Dev Team | Sprint 3 Story |
 
-**Full Sprint 2 Retrospective:** [docs/sprint-2-retrospective.md](docs/sprint-2-retrospective.md)
+**Full Sprint 2 Retrospective:** [docs/sprint-2-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-retrospective.md)
 
 ---
 
@@ -857,10 +857,10 @@ WARN logs capture business rule violations including duplicate email registratio
 
 | Document | Description | Location |
 |----------|-------------|----------|
-| Product Backlog | 5 user stories with acceptance criteria | [0-Sprint-Plan.md](0-Sprint-Plan.md) |
-| Definition of Done | Team quality standards | [0-Sprint-Plan.md](0-Sprint-Plan.md#definition-of-done) |
-| Sprint 1 Plan | Sprint 1 goals and user stories | [1-Sprint-1-Plan.md](1-Sprint-1-Plan.md) |
-| Sprint 2 Plan | Sprint 2 goals and user stories | [2-Sprint-2-Plan.md](2-Sprint-2-Plan.md) |
+| Product Backlog | 5 user stories with acceptance criteria | [0-Sprint-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/0-Sprint-Plan.md) |
+| Definition of Done | Team quality standards | [0-Sprint-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/0-Sprint-Plan.md#definition-of-done) |
+| Sprint 1 Plan | Sprint 1 goals and user stories | [1-Sprint-1-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/1-Sprint-1-Plan.md) |
+| Sprint 2 Plan | Sprint 2 goals and user stories | [2-Sprint-2-Plan.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/2-Sprint-2-Plan.md) |
 
 **User Stories Delivered:**
 - US1: User Registration (5 SP) - Sprint 1
@@ -889,7 +889,7 @@ WARN logs capture business rule violations including duplicate email registratio
 
 **Code Structure:** 25 Java files organized across 8 packages: config (1 file), controller (5), dto (5), exception (3), model (3), repository (2), security (3), service (3), plus 6 test classes and configuration files.
 
-**Total Java Files:** 25 files  
+**Total Java Files:** 25 files
 **Lines of Code:** 5,000+
 
 ---
@@ -897,7 +897,7 @@ WARN logs capture business rule violations including duplicate email registratio
 ### 3. CI/CD Evidence
 
 #### Pipeline Configuration
-**File:** [.github/workflows/ci.yml](.github/workflows/ci.yml)
+**File:** [.github/workflows/ci.yml](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/.github/workflows/ci.yml)
 
 **Pipeline Features:**
 - Automated build on push/PR
@@ -908,10 +908,10 @@ WARN logs capture business rule violations including duplicate email registratio
 
 #### Pipeline Execution Screenshots
 
-![Successful Pipeline Run](screenshots/pipeline-screenshot.png)
+![Successful Pipeline Run](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/pipeline-screenshot.png)
 *Figure 7: Successful pipeline execution showing Build, Test, Package, Docker Build stages*
 
-![Pipeline on Merge Requests](screenshots/ci-pipeline-on-merge-requests.png)
+![Pipeline on Merge Requests](https://github.com/bograh/Agile-and-Devops-in-Practice/raw/dev/screenshots/ci-pipeline-on-merge-requests.png)
 *Figure 8: PR validation workflow demonstrating automated checks on merge requests*
 
 **Failed Pipeline Handling:** Pipeline catches test failures and blocks PRs until tests pass (95%+ success rate over 20+ executions).
@@ -959,7 +959,7 @@ WARN logs capture business rule violations including duplicate email registratio
 ### 5. Sprint Review Documents
 
 #### Sprint 1 Review
-**Document:** [docs/sprint-1-review.md](docs/sprint-1-review.md) (7.6 KB)
+**Document:** [docs/sprint-1-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-review.md) (7.6 KB)
 
 **Contents:**
 - Sprint goal and achievement
@@ -971,7 +971,7 @@ WARN logs capture business rule violations including duplicate email registratio
 - Stakeholder feedback
 
 #### Sprint 2 Review
-**Document:** [docs/sprint-2-review.md](docs/sprint-2-review.md) (19 KB)
+**Document:** [docs/sprint-2-review.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-review.md) (19 KB)
 
 **Contents:**
 - Sprint goal and achievement
@@ -988,7 +988,7 @@ WARN logs capture business rule violations including duplicate email registratio
 ### 6. Retrospective Documents
 
 #### Sprint 1 Retrospective
-**Document:** [docs/sprint-1-retrospective.md](docs/sprint-1-retrospective.md) (8.8 KB)
+**Document:** [docs/sprint-1-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-1-retrospective.md) (8.8 KB)
 
 **Contents:**
 - What went well (4 items)
@@ -1000,7 +1000,7 @@ WARN logs capture business rule violations including duplicate email registratio
 - Team health assessment
 
 #### Sprint 2 Final Retrospective
-**Document:** [docs/sprint-2-retrospective.md](docs/sprint-2-retrospective.md) (17 KB)
+**Document:** [docs/sprint-2-retrospective.md](https://github.com/bograh/Agile-and-Devops-in-Practice/blob/dev/docs/sprint-2-retrospective.md) (17 KB)
 
 **Contents:**
 - What went well (5 items, TDD highlighted)
