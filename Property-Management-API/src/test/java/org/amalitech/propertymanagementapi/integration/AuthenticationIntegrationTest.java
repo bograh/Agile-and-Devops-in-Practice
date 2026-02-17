@@ -86,17 +86,17 @@ class AuthenticationIntegrationTest {
     }
     
     @Test
-    @DisplayName("Should return 401 when accessing secured endpoint without token")
+    @DisplayName("Should return 403 when accessing secured endpoint without token")
     void testSecuredEndpointWithoutToken() throws Exception {
         mockMvc.perform(get("/api/test/secure"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isForbidden());
     }
     
     @Test
-    @DisplayName("Should return 401 when accessing secured endpoint with invalid token")
+    @DisplayName("Should return 403 when accessing secured endpoint with invalid token")
     void testSecuredEndpointWithInvalidToken() throws Exception {
         mockMvc.perform(get("/api/test/secure")
                         .header("Authorization", "Bearer invalid.token.here"))
-                .andExpect(status().isUnauthorized());
+                .andExpect(status().isForbidden());
     }
 }
