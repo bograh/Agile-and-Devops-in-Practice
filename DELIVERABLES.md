@@ -3,9 +3,13 @@
 ## Project Overview
 
 **Project Name:** Property Management REST API
+
 **Duration:** 2 Sprints (2 weeks)
+
 **Methodology:** Agile (Scrum)
+
 **Team Size:** 1 Developer
+
 **Final Status:** Successfully Completed
 
 ---
@@ -207,6 +211,17 @@
 - [.github/pull_request_template.md](.github/pull_request_template.md)
   - PR checklist (Sprint 1 improvement)
   - Tests, documentation, code quality checks
+
+### 4. Evidence & Screenshots
+- [screenshots/pipeline-screenshot.png](screenshots/pipeline-screenshot.png)
+  - CI/CD pipeline execution screenshot
+  - Automated build and test workflow
+- [screenshots/ci-pipeline-on-merge-requests.png](screenshots/ci-pipeline-on-merge-requests.png)
+  - Pipeline triggered on merge requests
+  - PR validation workflow
+- [screenshots/tests-screenshot.png](screenshots/tests-screenshot.png)
+  - Test execution results
+  - Test coverage evidence
 
 ---
 
@@ -435,6 +450,28 @@ GET /actuator/info    ← Application info
 
 ---
 
+## 📸 Visual Evidence
+
+### CI/CD Pipeline Execution
+![CI/CD Pipeline](screenshots/pipeline-screenshot.png)
+*Automated build, test, and Docker image creation pipeline*
+
+### Pipeline on Pull Requests
+![Pipeline on PRs](screenshots/ci-pipeline-on-merge-requests.png)
+*Continuous integration triggered on merge requests for code validation*
+
+### Test Execution Results
+![Test Results](screenshots/tests-screenshot.png)
+*Comprehensive test suite execution showing unit and integration tests*
+
+**Evidence demonstrates:**
+- ✅ Automated CI/CD pipeline successfully running
+- ✅ Tests executing on every code change
+- ✅ Pull request validation workflow
+- ✅ Professional DevOps practices in action
+
+---
+
 ## Lessons Learned & Best Practices Demonstrated
 
 ### Technical Lessons
@@ -452,21 +489,21 @@ GET /actuator/info    ← Application info
 5. **Documentation:** Comprehensive docs critical for knowledge transfer
 
 ### Best Practices Applied
-✅ Clean Architecture (separation of concerns)
-✅ Test-Driven Development (TDD)
-✅ Conventional Commits
-✅ Feature Branch Workflow
-✅ CI/CD Automation
-✅ Docker Containerization
-✅ JWT for stateless authentication
-✅ BCrypt for password security
-✅ Method-level authorization
-✅ Global exception handling
-✅ Structured logging
-✅ Health check endpoints
-✅ Sprint ceremonies (planning, review, retrospective)
-✅ Velocity tracking
-✅ Process improvement
+- ✅ Clean Architecture (separation of concerns)
+- ✅ Test-Driven Development (TDD)
+- ✅ Conventional Commits
+- ✅ Feature Branch Workflow
+- ✅ CI/CD Automation
+- ✅ Docker Containerization
+- ✅ JWT for stateless authentication
+- ✅ BCrypt for password security
+- ✅ Method-level authorization
+- ✅ Global exception handling
+- ✅ Structured logging
+- ✅ Health check endpoints
+- ✅ Sprint ceremonies (planning, review, retrospective)
+- ✅ Velocity tracking
+- ✅ Process improvement
 
 ---
 
@@ -541,8 +578,8 @@ GET /actuator/info    ← Application info
 | | Integration Tests | | 30+ tests |
 | **DevOps** | GitHub Actions CI | | .github/workflows/ |
 | | Dockerfile | | Property-Management-API/ |
-| | PR Template | | .github/ |
-| **Docs** | Product Backlog | | 0-Sprint-Plan.md |
+| | PR Template | | .github/ || | CI/CD Screenshots | ✅ | screenshots/ |
+| | Test Execution Evidence | ✅ | screenshots/ || **Docs** | Product Backlog | | 0-Sprint-Plan.md |
 | | Sprint 1 Plan | | 1-Sprint-1-Plan.md |
 | | Sprint 2 Plan | | 2-Sprint-2-Plan.md |
 | | Sprint 1 Review | | docs/sprint-1-review.md |
