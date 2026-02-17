@@ -450,7 +450,7 @@ GET /actuator/info    ← Application info
 
 ---
 
-## 📸 Visual Evidence
+## Visual Evidence
 
 ### CI/CD Pipeline Execution
 ![CI/CD Pipeline](screenshots/pipeline-screenshot.png)
