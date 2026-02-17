@@ -1,15 +1,15 @@
 # Sprint 1 Review
 
-**Sprint Duration:** 1 Week  
-**Sprint Goal:** Deliver secure authentication (Registration + JWT Login) and establish automated CI pipeline with tests  
+**Sprint Duration:** 1 Week
+**Sprint Goal:** Deliver secure authentication (Registration + JWT Login) and establish automated CI pipeline with tests
 **Date:** February 17, 2026
 
 ---
 
-## ✅ Delivered Features
+## Delivered Features
 
 ### US1 – User Registration (5 Story Points)
-**Status:** ✅ Completed
+**Status:** Completed
 
 **Delivered:**
 - Email + password registration endpoint (`POST /api/auth/register`)
@@ -21,16 +21,16 @@
 - Integration tests for registration endpoint (5 test cases)
 
 **Acceptance Criteria Met:**
-- ✅ User can submit email + password
-- ✅ Password is encrypted using BCrypt
-- ✅ Duplicate email registration is prevented
-- ✅ API returns appropriate HTTP status codes
-- ✅ User stored in database with default role `USER`
+- User can submit email + password
+- Password is encrypted using BCrypt
+- Duplicate email registration is prevented
+- API returns appropriate HTTP status codes
+- User stored in database with default role `USER`
 
 ---
 
 ### US2 – JWT Authentication (8 Story Points)
-**Status:** ✅ Completed
+**Status:** Completed
 
 **Delivered:**
 - Login endpoint (`POST /api/auth/login`)
@@ -42,16 +42,16 @@
 - Integration tests for authentication flow (5 test cases)
 
 **Acceptance Criteria Met:**
-- ✅ User can log in with valid credentials
-- ✅ Invalid credentials return 401 Unauthorized
-- ✅ JWT is generated upon successful login
-- ✅ Token contains user ID and role claims
-- ✅ Protected endpoints require valid JWT
+- User can log in with valid credentials
+- Invalid credentials return 401 Unauthorized
+- JWT is generated upon successful login
+- Token contains user ID and role claims
+- Protected endpoints require valid JWT
 
 ---
 
 ### CI/CD Pipeline (5 Story Points)
-**Status:** ✅ Completed
+**Status:** Completed
 
 **Delivered:**
 - GitHub Actions workflow (`.github/workflows/ci.yml`)
@@ -62,18 +62,18 @@
 - Test result artifact upload
 
 **Acceptance Criteria Met:**
-- ✅ GitHub Actions pipeline runs on push
-- ✅ Application builds successfully
-- ✅ Unit tests execute automatically
-- ✅ Pipeline fails on test failure
-- ✅ Docker image is built successfully
+- GitHub Actions pipeline runs on push
+- Application builds successfully
+- Unit tests execute automatically
+- Pipeline fails on test failure
+- Docker image is built successfully
 
 ---
 
 ## 📊 Sprint Metrics
 
-**Planned Story Points:** 13 (US1: 5 + US2: 8)  
-**Delivered Story Points:** 18 (US1: 5 + US2: 8 + CI: 5)  
+**Planned Story Points:** 13 (US1: 5 + US2: 8)
+**Delivered Story Points:** 18 (US1: 5 + US2: 8 + CI: 5)
 **Velocity:** 18 SP (exceeded planned capacity)
 
 **Test Coverage:**
@@ -91,7 +91,7 @@
 
 ---
 
-## 🏗️ Technical Deliverables
+## Technical Deliverables
 
 ### API Endpoints
 
@@ -127,7 +127,7 @@
 
 ---
 
-## 🔄 Git Workflow
+## Git Workflow
 
 **Branching Strategy:**
 ```
@@ -154,19 +154,19 @@ ci: add GitHub Actions workflow and Dockerfile
 
 ---
 
-## 🎯 Definition of Done Verification
+## Definition of Done Verification
 
-- ✅ Code is implemented following clean architecture principles
-- ✅ Features pushed via feature branches
-- ✅ Pull requests merged into dev
-- ✅ Unit tests written and passing
-- ✅ Integration tests written and passing
-- ✅ CI pipeline passes successfully
-- ✅ Code committed with proper conventional commit messages
+- Code is implemented following clean architecture principles
+- Features pushed via feature branches
+- Pull requests merged into dev
+- Unit tests written and passing
+- Integration tests written and passing
+- CI pipeline passes successfully
+- Code committed with proper conventional commit messages
 
 ---
 
-## 🧪 Test Evidence
+## Test Evidence
 
 ### Test Execution Summary
 ```
@@ -177,27 +177,27 @@ BUILD SUCCESS
 ### Sample Test Cases
 
 **UserServiceTest:**
-- ✅ Should successfully register a new user
-- ✅ Should throw DuplicateEmailException when email already exists
-- ✅ Should encode password before saving
-- ✅ Should assign USER role by default
+- Should successfully register a new user
+- Should throw DuplicateEmailException when email already exists
+- Should encode password before saving
+- Should assign USER role by default
 
 **JwtTokenProviderTest:**
-- ✅ Should generate valid JWT token
-- ✅ Should extract username from token
-- ✅ Should extract role from token
-- ✅ Should validate token successfully
-- ✅ Should invalidate token with wrong user
+- Should generate valid JWT token
+- Should extract username from token
+- Should extract role from token
+- Should validate token successfully
+- Should invalidate token with wrong user
 
 **AuthenticationIntegrationTest:**
-- ✅ Should login successfully with valid credentials and return JWT
-- ✅ Should return 401 for invalid credentials
-- ✅ Should access secured endpoint with valid JWT token
-- ✅ Should return 403 when accessing secured endpoint without token
+- Should login successfully with valid credentials and return JWT
+- Should return 401 for invalid credentials
+- Should access secured endpoint with valid JWT token
+- Should return 403 when accessing secured endpoint without token
 
 ---
 
-## 📦 Docker Build
+## Docker Build
 
 Successfully created Dockerfile with:
 - Multi-stage build for optimization
@@ -208,7 +208,7 @@ Successfully created Dockerfile with:
 
 ---
 
-## 🎓 Lessons Learned
+## Lessons Learned
 
 ### What Went Well
 1. **Clear story breakdown** - Breaking work into user stories helped maintain focus
@@ -223,9 +223,9 @@ Successfully created Dockerfile with:
 
 ---
 
-## 🚀 Sprint Outcome
+## Sprint Outcome
 
-**Sprint Objective:** ✅ ACHIEVED
+**Sprint Objective:** ACHIEVED
 
 All planned features were delivered with high quality:
 - Secure user registration
@@ -238,7 +238,7 @@ The sprint exceeded the planned velocity by completing additional CI/CD infrastr
 
 ---
 
-## 📅 Next Sprint Preview
+## Next Sprint Preview
 
 **Sprint 2 Goals:**
 - Implement Role-Based Access Control (US3)
