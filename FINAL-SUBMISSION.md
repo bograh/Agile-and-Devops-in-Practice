@@ -1,6 +1,6 @@
 # Final Submission - Agile and DevOps in Practice
 
-**Student Name:** [Your Name]
+**Student Name:** Bernard Ograh
 **Course:** Agile and DevOps in Practice
 **Submission Date:** February 17, 2026
 **Project:** Property Management REST API
